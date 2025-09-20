@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="process.php">
+        <fieldset>
+            <p>
+        <!--personal info-->
+        <!--text input "Full Name" (req)-->
+        <!--email input "Student Email" (req)-->
+        <!--tel input  "Phone Number"-->
+                <legend>Personal info</legend>
+                <label> Full Name* </label>
+                <input type="text" name="fullname" />
+                <label> Student Email* </label>
+                <input type="text" name="email" />
+                <label> Phone Number </label>
+                <input type="text" name="phnumb" />
+            </p>
+            <p>
+        <!--course info-->
+        <!--select: "Course" from: "Web Development", "Data Science", "Graphic Design"-->
+        <!--date input for  "Desired Start Date"-->
+        <!--checkbox with label "I require financial aid information"-->
+                <legend>Course info</legend>
+                <label> Select course from: </label>
+                <select name="course">
+                    <option> Choose a course</option>
+                    <option> Web Development </option>
+                    <option> Data Science </option>
+                    <option> Graphic Design </option>
+                </select>
+            </p>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>

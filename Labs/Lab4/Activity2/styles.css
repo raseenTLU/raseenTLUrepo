@@ -1,0 +1,20 @@
+p{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.highlight{
+    text-align: center;
+    background-color: rgb(250, 10, 100);
+}
+
+#special{
+    font-style: italic;
+    border: 1px solid;
+    padding: 20px 100px 0px;
+    margin: 10px;
+}
+
+a:hover {
+    color:deeppink;
+}
