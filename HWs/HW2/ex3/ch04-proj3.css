@@ -1,0 +1,59 @@
+
+* {
+   box-sizing: border-box;
+}
+body, section, header, div, p, h1, h2, h3, ul, li, figure, figcaption {
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   background-color: #F0F4F8;
+   font-weight: 300;
+}
+
+/* add styles here */
+
+/*
+
+1.
+Examine ch04-proj03.css
+Do not make any changes.
+
+2.
+Edit ch04-proj03.css
+
+3.
+The <header> will contain a background-image.
+Set background-size = cover.
+Set width <header> = 100% 
+Set min-height <header> = 500px
+
+4.
+Add logo in top-left corner as a background-image to <nav>
+Set logo size = about 60px
+padding and height of <nav> = based on size of logo
+
+5.
+For each list item in the <nav> element
+remove list bullets by list-style-type = none
+Make list horizontal by display property of each <li> = inline-block
+Set the link, visited, and hover colors of the navigation links.
+
+6.
+Set the margin of the <div> within the <header> to position
+it roughly in the vertical middle of the big photo.
+Set its left margin so it is aligned with the navigation.
+
+7.
+The card <div> elements need to be on a single line, so set the display property of
+each card to inline-block. For the <div> within the card (and its contents), set their
+padding and margins to get a similar appearance as the final solution.
+
+8.
+For the heart and comment <span> elements, use the background-image,
+background-size, padding, and margin properties to get a similar appearance as the
+final solution below.
+
+*/

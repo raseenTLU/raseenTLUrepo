@@ -1,0 +1,130 @@
+
+* {
+   box-sizing: border-box;
+}
+body, section, header, div, p, h1, h2, h3, ul, li {
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+body {
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   background-color: #e4e7eb;
+   font-weight: 300;
+   padding: 40px;
+}
+header {
+   margin-left: 20px;
+}
+h1 { 
+   text-align: center;
+   font-weight: 600;
+   font-size: 42px;
+   padding: 10px 0;
+}
+
+section{
+   width: 910px;
+}
+div{
+   display: inline-block;
+   width: 300 px;
+   background-color: white;
+   font-weight: 800, 600, 400, 300;
+   font-size: 36px, 24px, 18px;
+}
+ul{
+   list-style-type: none;
+}
+.column.featured{
+   background-color: #2F4F4F
+}
+/* Selects the second li element in a list */
+.column.featured li:nth-child(even) {
+  background-color: rgba(47,59,64,0.35);
+}
+.column li:nth-child(even) {
+  background-color: rgba(47,59,64,0.35);
+}
+div a{
+   background-color: #346BA5;
+   color: white; 
+   text-align: center;
+   display: inline-block;
+   border-radius: 3px;
+   padding: 10px 20px;
+   box-shadow: silver;
+}
+div a:hover {
+  background-color: #437CBF;
+}
+#confiedence{
+   background-image: url('');
+   background-size: 24px;
+}
+   /*
+
+1.
+Examine ch04-proj02.html.
+Do not make any changes to html file.
+
+2.
+Edit ch04-proj02.css by defining styles
+
+3. DONE
+Add padding <body> = about 40px
+width of <section> = 910px
+You will need a variety of different text styling,
+using a variety of different font sizes and font weights.
+
+4. DONE
+Each of the column <div> elements must have its display property set to inline-block.
+This will allow the <div> elements to “sit” together on the same line.
+Also set some of the other column properties to the values shown.
+The second column will have a different background color.
+Remove the list bullets by setting the list-style-type to none.
+
+5. DONE
+For the list items within each column, make every second item a
+different color using the nth-child pseudo selector.
+Use the rgba() function, which will darken the underlying background color.
+
+6. DONE
+Specify the link, visited, and hover formatting of the Sign Up link.
+Notice the rounded corners and the box shadow.
+
+7.
+For the bottom “confidence” <div>,
+the list items have a background image (checkmark.svg).
+Set the background-size property to 24px.
+The padding-left and the margin of each <li> item will have to be
+modified so they don’t overlap the checkmark image.
+Remove the bullet from each list item.
+
+
+display: inline-block
+width: 300 px;
+background-color: white;
+font-weights: 800,600,400,300
+font-sizes: 36px, 24px, 18px
+padding
+hex codes
+#5BB189
+#4B0082
+#EC632A
+rgba(47,59,64,0.35);
+box-shadow
+#346BA5 (background)
+#437CBF (hover)
+#2F4F4F
+
+footer:
+background-image
+background-size
+padding
+margin
+
+webpage width: 910px
+
+*/

@@ -1,0 +1,125 @@
+/*webpage background formatting*/
+body{
+    margin-top: 0em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-bottom: 0em;
+    background-color: #f9f9f9;
+}
+/*text background formatting*/
+article
+{
+    /*background-color: #FFFFFF;*/
+    padding: 5em;
+}
+/*heading 1 formatting*/
+h1{
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    color: #9f2042;
+    text-align: center;
+}
+/*qoute formatting*/
+blockquote{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.25rem;
+    border-style: solid;
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-color: #ececec;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-content: center;
+}
+/*regular text formatting*/
+p{
+    font-family: 'Open Sans';
+    font-size: 0.9rem;
+}
+/*author formatting*/
+#details{
+    font-family: 'Open Sans';
+    font-size: 1.25rem;
+    color: #a9a9b9;
+    text-align: center;
+}
+/*button formatting*/
+#buttons{
+    border-style: solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    border-color: #ececec;
+    display: inline-block;
+}
+/*link text color no hover*/
+a{
+    color: #ec8295;
+}
+/*link text hover*/
+a:hover {
+    background-color: #a9a9ba;
+    color: #9f2042;
+}
+/*image scale*/
+img {
+    /*transform: scale(0.7);*/
+    width: 100%;
+    height: auto;
+}
+/*footer formatting*/
+footer{
+    background-color: #29293a;
+    padding-left: 2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-right: 2em;
+    color:#FFFFFF;
+    width: 100%
+}
+/*
+1.
+Examine ch04-proj01.html in browser.
+Do not make any changes to file.
+
+2.
+Edit styles.css by styles
+so it looks similar to website
+
+3. DONE
+<body> margins:
+top margin = 0em 
+left margin = 4em
+right margin = 4em
+bottom margin = 0em
+
+4. DONE
+font_family <h1> and <blockquote> = Roboto Slab 
+font_size <h1> and <blockquote> = 2rem and 1.25rem
+font_family everywhere else = Open Sans
+font_size  everywhere else =  0.9rem or 1rem or 1.25rem
+
+5. DONE
+for multiple elements:
+adjust margin
+adjust padding
+adjust border
+
+6. FIX 2 BUTTONS
+links have the same color
+for visited and not-visited.
+For the two external links
+add borders with rounded corners
+You will also need to define hover so
+background color = #a9a9ba
+text color = #9f2042
+
+7.
+use:
+text-transform
+text-align
+text-decoration properties
+
+8.
+Set the width property of the image so it scales to its container’s size (use a % value).
+*/
