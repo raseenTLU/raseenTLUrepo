@@ -169,13 +169,69 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.footer-logo h2 {
+  margin: 0;
+}
+
+.footer-logo img {
+  height: 30px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social img {
+  height: 20px;
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.footer-links li a {
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/*footer, layouts not working properly
+.footer {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 5 20px;
   position: relative;
 }
 
-.footer-logo img,{
+.footer-logo img{
   height: 30px;
 }
 .footer-social img{
@@ -184,9 +240,7 @@ header {
 }
 
 .footer-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+position: absolute;
   text-align: center;
 }
 .footer-links {
