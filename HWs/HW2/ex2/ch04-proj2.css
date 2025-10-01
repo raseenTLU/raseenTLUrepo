@@ -23,7 +23,7 @@ h1 {
    font-size: 42px;
    padding: 10px 0;
 }
-
+/*width of webpage*/
 section{
    width: 910px;
 }
@@ -34,19 +34,23 @@ div{
    font-weight: 800, 600, 400, 300;
    font-size: 36px, 24px, 18px;
 }
+/*no bullets in lists*/
 ul{
    list-style-type: none;
 }
+/*featured column is unique color*/
 .column.featured{
    background-color: #2F4F4F
 }
-/* Selects the second li element in a list */
+/*shade every other feature*/
 .column.featured li:nth-child(even) {
   background-color: rgba(47,59,64,0.35);
 }
+/*shade every other feature*/
 .column li:nth-child(even) {
   background-color: rgba(47,59,64,0.35);
 }
+/*sign up buttons*/
 div a{
    background-color: #346BA5;
    color: white; 
@@ -56,14 +60,19 @@ div a{
    padding: 10px 20px;
    box-shadow: silver;
 }
+/*sign up hover*/
 div a:hover {
   background-color: #437CBF;
 }
-#confiedence{
-   background-image: url('');
-   background-size: 24px;
+/*checkmarks*/
+#confidence li{
+   list-style-image: url('..\..\..\..\..\FoundationsCoding2025\raseenTLUrepo\HWs\HW2\ex2\checkmark.svg');
+   list-style-position:outside;
+   background-position: center;
+   padding-left: 30px;
+   margin-left: 30px;
 }
-   /*
+/*
 
 1.
 Examine ch04-proj02.html.

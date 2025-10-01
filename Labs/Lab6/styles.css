@@ -1,0 +1,94 @@
+.main{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cool-btn{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border: 1px solid red;
+    padding: 5px;
+    margin: 20px;
+    display: inline-block;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.cool-btn:hover{
+    background-color: red;
+    color: white;
+    transform: scale(1.2)
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product{
+    flex-basis: 30%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product img{
+    width: 100%;
+    display: block;
+    animation: imageLoad 0.8s ease-out;
+}
+
+.textLayer{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+/*    transition: background 034s ease-in-out;*/
+}
+
+.textLayer:hover{
+    background: rgba(231, 112, 130, 0.5);
+}/* 0.5 opacity*/
+
+.textLayer h3{
+    width: 100%;
+    font-weight: 500;
+    font-size: 26px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: translateY(20px);
+}
+
+.textLayer h3:hover{
+    bottom: 49%;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes imageLoad {
+    0%{
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (min-width:776px) {
+    .gallery{
+        flex-direction: column;
+    }
+    .product{
+        flex-basis: 100%;
+
+    }
+}
