@@ -142,7 +142,7 @@ header {
 }
 
 .our-team{
-  position:absolute;
+  /*position:absolute;*/
   width: 70%;
   left: 15%;
   padding: 30px;
@@ -150,10 +150,53 @@ header {
   border-radius: 20px;
 }
 .features{
-  position:absolute;
+  /*position:absolute;*/
   width: 70%;
   left: 15%;
   padding: 30px;
   background-color: whitesmoke;
   border-radius: 20px;
+}
+
+/*footer*/
+.footer {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.footer-logo img,{
+  height: 30px;
+}
+.footer-social img{
+  height: 20px;
+  padding: 20px;
+}
+
+.footer-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.footer-links li a {
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 10px;
 }
