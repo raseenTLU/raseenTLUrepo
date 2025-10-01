@@ -7,7 +7,7 @@
 body {
   font-family: Arial, sans-serif;
 }
-
+/*HEADER*/
 header {
   display: flex;
   justify-content: space-between;
@@ -15,35 +15,39 @@ header {
   padding: 20px 40px;
   background-color: #055555;
   color: white;
+  position: sticky;
+  top: 0;
 }
-
 .logo {
   font-size: 24px;
   font-weight: bold;
 }
-
+/*properties of header links*/
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-
 .nav-links li a {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
-
+/*hover for header links*/
 .nav-links li a:hover {
   color: #f0a500;
 }
-
-.hamburger { /*hamburger icon*/
+/*hamburger icon*/
+.hamburger {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
-
+/*all images that need to be aligned right are class="img_right"*/
+.img_right{
+  float: right;
+  width: 50%;
+}
 /* RESPONSIVE - Mobile - Header */
 @media (max-width: 768px) {
   .hamburger {
@@ -72,50 +76,52 @@ header {
 
 /* HERO SECTION */
 .hero {
-  text-align: left;
-  padding: 100px 20px;
-  background: #f5f5f5;
+  background: #055555;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 100px;
 }
-
 .hero-heading {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: white;
 }
-
 .hero-subtext {
   font-size: 18px;
-  color: #555;
+  color: white;
   margin-bottom: 40px;
 }
-
+/*call to action button properties*/
 .cta-button {
   padding: 12px 30px;
-  font-size: 16px;
+  font-size: 20px;
   background-color: #2bcccf;
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
-
-.hero-image {
+/*trying to align text to left and image to right*/
+.hero-left {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  float: left;
+}
+.hero-right {
+  max-width: 50%;
+  height: auto;
   float: right;
 }
 
 /* RESPONSIVE - Mobile - Hero */
-
 @media (max-width: 768px) {
   .hero-heading {
     font-size: 2.2rem;
   }
-
   .hero-subtext {
     font-size: 1rem;
   }
-
   .cta-button {
     padding: 12px 24px;
     font-size: 0.95rem;
