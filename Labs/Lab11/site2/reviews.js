@@ -39,6 +39,8 @@ const randomBtn = document.querySelector('.random-btn');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
+const ids = [1,2,3,4];
+
 const showReview = (id) => {
   reviewAuthor.textContent = reviews[id].name;
   job.textContent = reviews[id].job;
@@ -48,10 +50,23 @@ const showReview = (id) => {
 
 randomBtn.addEventListener('click',()=>{
   let index = Math.floor(Math.random() * reviews.length);
-  console.log(index);
+  console.log(`index`,index);
   showReview(index);
 });
 
+// Option B (Loop Continuously)
+let index = 0; // for prev & next btn
+
 //hw - prev btn
+prevBtn.addEventListener('click',()=>{
+  index = (index - 1 + ids.length) % ids.length;
+  console.log(`index`,index);
+  showReview(index);
+});
+
 //hw - next btn
-//current index defined, loop numbers or disable prev/next btn
+nextBtn.addEventListener('click',()=>{
+  index = (index + 1) % ids.length;
+  console.log(`index`,index);
+  showReview(index);
+});
