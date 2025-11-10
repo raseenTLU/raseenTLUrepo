@@ -71,36 +71,28 @@ const menuList = [
       img: "./images/item-9.jpeg",
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
+    {
+      id: 10,
+      title: "dino nuggets",
+      category: "kids",
+      price: 5.99,
+      img: "./images/item-10.jpeg",
+      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    },
   ];
-  
- /* return `<div class="menu-item-col">
-  <img src= alt=>
-  <div class="item-info">
-      <header>
-          <h4></h4>
-          <h4 class="price"></h4>
-      </header>
-      <p class="item-text"></p>
-  </div>
-</div>`
-*/
 
-/*
-return `<button class="filter-btn" type="button" data-id=  >  </button>`
-*/
 let sectionCenter = document.querySelector(".menu-wrap-section");
 const btnContainer = document.querySelector(".btn-container");
 
 window.addEventListener("DOMContentLoaded", function () {
-  displayMenuItems();
-    
+  displayMenuItems(menuList); // display all upon initial landing
 });
 
-const displayMenuItems = () => {
+const displayMenuItems = (menuArr) => {
   // let menuItem = menuList [2];
   // console.log(menuItem);
 
-  let displayMenu = menuList.map((menuItem) =>{
+  let displayMenu = menuArr.map((menuItem) =>{
     return  `<div class="menu-item-col">
       <img src=${menuItem.img} alt=${menuItem.title}>
       <div class="item-info">
@@ -113,6 +105,43 @@ const displayMenuItems = () => {
     </div>`
   })
 
-  console.log(displayMenu);
+  console.log('display menu',displayMenu);
+  displayMenu = displayMenu.join(""); //to hide "," below btns
   sectionCenter.innerHTML = displayMenu;
 }
+
+const displayMenuBtns = ()=>{
+  const categories = menuList.reduce((accumulator,currentItem)=>{
+    if(accumulator.includes(currentItem.category))
+      console.log('category exists');
+    else{
+      console.log('category missing !');
+      accumulator.push(currentItem.category);
+    }
+    console.log('accumulator',accumulator);
+    return accumulator; //multi line function
+  },["all"])
+
+  console.log(categories);
+
+  const categoryBtn = categories.map((itemCategory)=>{
+    return `<button class="filter-btn" type="button" data-id=${itemCategory}>${itemCategory}</button>`
+  }).join("");
+  btnContainer.innerHTML = categoryBtn;
+  
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  console.log('filer btns',filterBtns);
+  filterBtns.forEach((button)=>{
+    button.addEventListener('click',(event)=>{
+      console.log('event listener',event.currentTarget.dataset.id);
+      const category = event.currentTarget.dataset.id;
+      const menuSubList = menuList.filter((menuItem) => menuItem.category === category)
+      console.log('menu sub list',menuSubList);
+      if(category === 'all')
+        displayMenuItems(menuList);
+      else
+        displayMenuItems(menuSubList);
+    })
+  })
+}
+displayMenuBtns();
