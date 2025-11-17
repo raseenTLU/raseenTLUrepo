@@ -25,6 +25,7 @@ async function getRandomMeal(){
     const resp = await fetch(randomMealURL);
     const randomData = await resp.json();
     const randomMeal = randomData.meals[0];
+    mealsElement.innerHTML = "";
     addMeal(randomMeal);
 }
 
@@ -41,5 +42,5 @@ function addMeal(mealData){
                                <i class="fas fa-heart"></i> //font awesome
                            </button>
                      </div>`;
-    mealElement.appendChild(meal);
+    mealsElement.appendChild(meal);
 }
