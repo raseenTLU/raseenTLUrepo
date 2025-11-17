@@ -18,4 +18,3 @@ const getRandomMeal = () => {
     //const data = await resp1.json();
 
 }
-getRandomMeal();
