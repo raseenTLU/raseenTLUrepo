@@ -26,16 +26,16 @@ const getRadnomMeal = async ()=> {
    //console.log(data.meals[0]);
    const randomMeal = data.meals[0];
 
-   addMeal(randomMeal);
+   addMeal(randomMeal,true);
 }
 
-const addMeal = (mealData)=> {
+const addMeal = (mealData, random=false)=> {
    const meal = document.createElement('div');
    meal.classList.add('meal');
 
    meal.innerHTML = `
                <div class="meal-header">
-                        <span class="random">Meal of the Day</span>
+                        ${random?`<span class="random">Meal of the Day</span>`:""}
                         <img 
                         src="${mealData.strMealThumb}" 
                         alt="${mealData.strMeal}">
@@ -71,8 +71,13 @@ const addMeal = (mealData)=> {
       })
    }
    mealsElement.appendChild(meal);
-   updateFavoriteMeals();
 
+   const mealHeader = meal.querySelector('.meal-header');
+   mealHeader.addEventListener('click',()=>{
+      console.log("Clicked");
+      OpenMealDetailsPage();
+      
+   })
 }
 
 const addMealsToLocalStorage = (mealId)=> {
@@ -138,24 +143,47 @@ const addMealToFavorites = (meal)=> {
       updateFavoriteMeals();
    })
    favorites.appendChild(favoriteMeal);
+
+   const faveImg = favoriteMeal.querySelector('#fave-img');
+   faveImg.addEventListener('click',()=>{
+      console.log("Clicked");
+      OpenMealDetailsPage();
+      
+   });
 }
 
+const initMain = () =>{
+   getRadnomMeal();
+   updateFavoriteMeals();
 
-getRadnomMeal();
-updateFavoriteMeals();
+   searchBtn.addEventListener('click',()=>{
+      const searchWord = searchTerm.value;
+      console.log(searchWord);
+      
+      searchForMeal(searchWord);
+      
+   });
 
-searchBtn.addEventListener('click',()=>{
+}
+searchTerm.addEventListener('input',()=>{
    const searchWord = searchTerm.value;
    console.log(searchWord);
    
    searchForMeal(searchWord);
-   
 });
 
 //displaying the search meals
-const searchForMeal = (word)=>{
-   getMealBySearch(word);
+const searchForMeal = async(word)=>{
+   const searchResults = await getMealBySearch(word);
+   console.log(searchResults);
+   
+
+
+   mealsElement.innerHTML= "";
+   if(searchResults)
+      searchResults.forEach((meal)=>addMeal(meal));
 }
+
 
 //searching the meals
 const getMealBySearch = async (word)=>{
@@ -167,4 +195,8 @@ const getMealBySearch = async (word)=>{
    console.log(output)
 
    return output; 
+}
+
+const OpenMealDetailsPage = ()=>{
+   window.open("details.html");
 }
