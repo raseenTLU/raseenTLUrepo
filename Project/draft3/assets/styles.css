@@ -1,0 +1,999 @@
+/*FIGMA COPY ALL LAYERS AS CSS CODE*/
+
+/* PAGE: Create a Plan */
+
+position: relative;
+width: 478px;
+height: 966px;
+
+background: #FFFFFF;
+
+
+/* Device frame */
+
+position: absolute;
+width: 412px;
+height: 892px;
+left: 33px;
+top: 37px;
+
+/* M3/sys/light/surface-container-lowest */
+background: #FFFFFF;
+/* M3/sys/light/outline-variant */
+border: 8px solid #CAC4D0;
+border-radius: 18px;
+
+
+/* Building Blocks/status-bar */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-end;
+padding: 10px 24px;
+gap: 286px;
+isolation: isolate;
+
+position: absolute;
+height: 52px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+
+
+/* Time */
+
+margin: 0 auto;
+width: 29px;
+height: 20px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+letter-spacing: 0.01em;
+font-feature-settings: 'pnum' on, 'lnum' on, 'ss02' on;
+
+/* M3/sys/light/on-surface */
+color: #1D1B20;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* right icons */
+
+margin: 0 auto;
+width: 46px;
+height: 17px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Wifi */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 342px;
+top: 25px;
+
+
+
+/* Path */
+
+position: absolute;
+left: 83.01%;
+right: 12.86%;
+top: 48.08%;
+bottom: 19.23%;
+
+
+
+/* Rectangle */
+
+position: absolute;
+left: 83.01%;
+right: 12.86%;
+top: 48.08%;
+bottom: 19.23%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 83.01%;
+right: 12.86%;
+top: 48.08%;
+bottom: 19.23%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 83.01%;
+right: 12.86%;
+top: 50.8%;
+bottom: 21.96%;
+
+/* M3/sys/light/on-surface */
+background: #1D1B20;
+opacity: 0.1;
+
+
+/* Signal */
+
+position: absolute;
+width: 17px;
+height: 17px;
+left: 358px;
+top: 25px;
+
+
+
+/* Path */
+
+position: absolute;
+left: 86.89%;
+right: 8.98%;
+top: 48.08%;
+bottom: 19.23%;
+
+
+
+/* Path */
+
+position: absolute;
+left: 87.24%;
+right: 9.32%;
+top: 50.8%;
+bottom: 21.96%;
+
+/* M3/sys/light/on-surface */
+background: #1D1B20;
+
+
+/* Battery */
+
+position: absolute;
+width: 8px;
+height: 15px;
+left: 380px;
+top: 26px;
+
+
+
+/* Base */
+
+position: absolute;
+width: 8px;
+height: 15px;
+left: 0px;
+top: 0px;
+
+/* M3/sys/light/on-surface */
+background: #1D1B20;
+opacity: 0.3;
+
+
+/* Charge */
+
+position: absolute;
+width: 8px;
+height: 7px;
+left: 0px;
+top: 8px;
+
+/* M3/sys/light/on-surface */
+background: #1D1B20;
+
+
+/* Camera Cutout */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: calc(50% - 24px/2);
+top: 18px;
+
+/* M3/sys/light/on-surface */
+background: #1D1B20;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Building Blocks/navigation */
+
+position: absolute;
+height: 24px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+
+
+
+/* handle */
+
+position: absolute;
+width: 108px;
+height: 4px;
+left: calc(50% - 108px/2);
+top: calc(50% - 4px/2);
+
+/* M3/sys/light/on-surface */
+background: #1D1B20;
+border-radius: 12px;
+
+
+/* Group 1 */
+
+position: absolute;
+width: 223px;
+height: 279.82px;
+left: calc(50% - 223px/2 + 0.5px);
+top: 387.31px;
+
+
+
+/* 6a0afc70-5f21-4143-bea0-ca271d4cafe4 4 */
+
+position: absolute;
+width: 223px;
+height: 279.82px;
+left: 128px;
+top: 387.31px;
+
+background: url(6a0afc70-5f21-4143-bea0-ca271d4cafe4.jpg);
+
+
+/* Rectangle 4 */
+
+position: absolute;
+width: 12.87px;
+height: 45.03px;
+left: 128px;
+top: 539.55px;
+
+background: #FFFFFF;
+
+
+/* XR/XR App Bar
+
+<p>This version of the component has been adapted for XR.</p><p><br></p><p>Use an app bar to provide content and actions related to a current screen, such as navigation, screen headlines, and actions.</p><p><br></p><ol><li value="1" data-list="bullet">Focus on describing the current page and provide 1–2 essential actions.</li><li value="2" data-list="bullet">Displays labels and page navigation controls at the top of the page. (Use a toolbar to display page actions</li></ol><p><br></p><p><a rel="noreferrer noopener nofollow ugc" href="https://m3.material.io/components/app-bars/xr" target="_blank">Guidelines</a></p>
+
+<p>The top app bar provides content and actions related to the current screen. It’s used for branding, screen titles, navigation, and actions.</p><p><br></p><p>[GDP / GM3 Design System] 🔍</p>
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px 66px;
+gap: 6px;
+isolation: isolate;
+
+position: absolute;
+width: 367px;
+height: 64px;
+left: 57px;
+top: 105px;
+
+/* M3/sys/light/surface-container */
+background: #F3EDF7;
+border-radius: 36px;
+
+
+/* Text content */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 235px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+z-index: 0;
+
+
+/* Headline */
+
+width: 235px;
+height: 28px;
+
+/* M3/title/large */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 28px;
+/* identical to box height, or 127% */
+display: flex;
+align-items: center;
+
+/* M3/sys/light/on-surface */
+color: #1D1B20;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Leading icon
+
+Standard Icon buttons are low-emphasis buttons.
+They are used for the lowest priority actions, especially when presenting multiple options.
+
+Icon buttons can be placed on a variety of backgrounds. Until the button is interacted with, its container isn’t visible.
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 12px;
+top: calc(50% - 48px/2);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* State-layer */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* icon */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 25%;
+bottom: 25%;
+
+/* M3/sys/light/on-surface-variant */
+background: #49454F;
+
+
+/* Trailing elements */
+
+position: absolute;
+width: 48px;
+height: 48px;
+right: 12px;
+top: calc(50% - 48px/2);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Trailing icon
+
+Standard Icon buttons are low-emphasis buttons.
+They are used for the lowest priority actions, especially when presenting multiple options.
+
+Icon buttons can be placed on a variety of backgrounds. Until the button is interacted with, its container isn’t visible.
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 48px;
+height: 48px;
+left: 0px;
+top: 0px;
+
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* State-layer */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* icon */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+/* M3/sys/light/on-surface-variant */
+background: #49454F;
+
+
+/* Button
+
+<p>Buttons communicate actions that users can take.</p><p><br></p><ol><li value="1" data-list="bullet">Can contain an optional leading icon</li><li value="2" data-list="bullet">Five color options: elevated, filled, tonal, outlined, and text</li><li value="3" data-list="bullet">Five size recommendations: extra small, small, medium, large, extra large</li><li value="4" data-list="bullet">Two shape options: round and square</li><li value="5" data-list="bullet">Keep labels concise and use sentence-case</li></ol><p><br></p>
+
+Standard Icon buttons are low-emphasis buttons.
+They are used for the lowest priority actions, especially when presenting multiple options.
+
+Icon buttons can be placed on a variety of backgrounds. Until the button is interacted with, its container isn’t visible.
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 107px;
+height: 56px;
+left: calc(50% - 107px/2 + 0.5px);
+top: 764px;
+
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 107px;
+height: 56px;
+
+/* dark purple */
+background: #7E40A3;
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* State-layer */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 24px;
+gap: 8px;
+
+width: 107px;
+height: 56px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+display: none;
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Label */
+
+width: 59px;
+height: 24px;
+
+/* M3/title/medium */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.15px;
+
+/* light white */
+color: #FFFDEE;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Make a New Plan */
+
+position: absolute;
+width: 170px;
+height: 28px;
+left: calc(50% - 170px/2 - 3px);
+top: 266px;
+
+/* M3/title/large-emphasized */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 28px;
+/* identical to box height, or 127% */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Choose your preferred movie, dates, and theaters. Then share the plan code with your friends so they can vote on their favorites! */
+
+position: absolute;
+width: 331px;
+height: 72px;
+left: calc(50% - 331px/2 - 0.5px);
+top: 327px;
+
+/* M3/title/medium */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.15px;
+
+color: #000000;
+
+
+
+/* Text field
+
+Use a text field when someone needs to enter text into a UI, such as filling in contact or payment information.
+
+🛠 Additional options
+Support text - you can toggle supporting text between hide and show.
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+isolation: isolate;
+
+position: absolute;
+width: 210px;
+height: 56px;
+left: calc(50% - 210px/2);
+top: 675px;
+
+border-radius: 4px 4px 0px 0px;
+
+
+/* Text field */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 210px;
+height: 56px;
+
+/* M3/sys/light/outline */
+border: 1px solid #79747E;
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+z-index: 0;
+
+
+/* State-layer */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 0px 4px 16px;
+gap: 4px;
+
+width: 210px;
+height: 56px;
+
+border-radius: 4px 4px 0px 0px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 4px 0px;
+isolation: isolate;
+
+width: 142px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Input text container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 142px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Input text */
+
+width: 142px;
+height: 24px;
+
+/* M3/body/large */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+letter-spacing: 0.5px;
+
+/* M3/sys/light/on-surface */
+color: #1D1B20;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Label text container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 4px;
+
+position: absolute;
+width: 101px;
+height: 16px;
+left: -4px;
+top: -12px;
+
+/* M3/sys/light/surface */
+background: #FEF7FF;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Label text */
+
+width: 93px;
+height: 16px;
+
+/* M3/body/small
+
+0.4
+*/
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+letter-spacing: 0.4px;
+
+/* M3/sys/light/on-surface-variant */
+color: #49454F;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Trailing icon
+
+Standard Icon buttons are low-emphasis buttons.
+They are used for the lowest priority actions, especially when presenting multiple options.
+
+Icon buttons can be placed on a variety of backgrounds. Until the button is interacted with, its container isn’t visible.
+*/
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 48px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Content */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* State-layer */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* icon */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 8.33%;
+bottom: 8.33%;
+
+/* M3/sys/light/on-surface-variant */
+background: #49454F;
+
+
+/* Supporting text */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 4px 16px 0px;
+gap: 10px;
+
+position: absolute;
+display: none;
+height: 20px;
+left: 0px;
+right: 0px;
+bottom: -20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
