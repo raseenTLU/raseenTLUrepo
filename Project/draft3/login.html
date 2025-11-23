@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Symc</title> 
+    <title>Login | Symc</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-  </head>
+</head>
 <body>
   <nav>
-  <!------------------------- NAVIGATION --------------------------->
     <div class="menu">
       <div class="logo">
         <a href="index.html">Symc</a>
-        <i class="fa-solid fa-clapperboard" style="color: #7e40a3;"></i>
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -24,21 +22,24 @@
       </ul>
     </div>
   </nav>
-  <!-------------------- HERO ---------------------------------->
-<section class="hero">
-  <div class="center">
-    <div class="hero-txt"><p>Plan your perfect movie</p><p>night with friends</p></div>
-    <div class="hero-subtxt"><p>No more endless group chats. Find the movie,</p><p>time, and theater that works for everyone.</p></div>
-    <div class="hero-image">
-      <img src="assets/hero-img.jpg" alt="Purple clapperboard with sunglasses">
-    </div>
-    <div class="btns">
-      <a href="create.html"><button>Create Plan</button></a>
-      <a href="join.html"><button>Join Plan</button></a>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <header>Login</header>
+      <form action="#">
+        <input type="email" placeholder="Enter your email" required>
+        <input type="password" placeholder="Enter your password" required>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <input type="submit" class="button" value="Login">
+      </form>
+      <div class="auth-footer">
+        <span>Don't have an account? 
+         <a href="signup.html">Sign up</a>
+        </span>
+      </div>
     </div>
   </div>
-</section>
-  <!----------------------------- FOOTER --------------------------------->
+
   <footer>
     <div class="content">
       <div class="link-boxes">
