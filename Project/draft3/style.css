@@ -14,13 +14,12 @@ after following tutorials from coding lab/coding nepal
   font-family: 'Oxygen',sans-serif;
 }
 body{
-  min-height: auto;
+  min-height: 100vh;
   width: 100%;
   background: whitesmoke;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
-  padding-bottom: 0;
 }
 ::selection{
   color: black;
@@ -73,7 +72,7 @@ nav .menu{
   color: black;
 }
 /* ------------------------------------ HERO --------------------------- */
-.hero {
+.hero .create {
   width: 100%;
   min-height: calc(100vh - 80px);
   display: flex;
@@ -104,12 +103,13 @@ nav .menu{
   margin-bottom: 40px;
   max-width: 600px;
 }
-.hero-image {
+.image {
   width: 100%;
   max-width: 500px;
   margin-bottom: 40px;
+  text-align: center;
 }
-.hero-image img {
+.image img {
   width: 40%;
   height: auto;
 }
@@ -157,7 +157,7 @@ nav .menu{
   .center .hero-subtxt{
     font-size: 18px;
   }
-  .hero-image {
+  .image {
     max-width: 400px;
     margin-bottom: 30px;
   }
@@ -176,7 +176,7 @@ nav .menu{
   .center .btns button {
     width: 100%;
   }
-  .hero-image {
+  .image {
     max-width: 100%;
     margin-bottom: 25px;
   }
@@ -186,6 +186,7 @@ nav .menu{
 footer{
   background: indigo;
   width: 100%;
+  margin-top: auto;
 }
 footer::before{
   content: '';
@@ -374,20 +375,21 @@ footer .bottom-details .bottom_text{
   overflow: hidden;
 }
 /* --------------------------- CONTACT --------------------------- */
-.container{
+.contactcont{
   width: 85%;
   max-width: 1250px;
   background: white;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
-  margin: 40px auto 60px auto;
+  margin: 40px auto;
+  flex: 1;
 }
-.container .content{
+.comtactcont .content{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container .content .left-side{
+.contactcont .content .left-side{
   width: 25%;
   height: 100%;
   display: flex;
@@ -425,22 +427,22 @@ footer .bottom-details .bottom_text{
   font-size: 14px;
   color: silver;
 }
-.container .content .right-side{
+.contactcont .content .center-align{
   width: 75%;
   margin-left: 75px;
 }
-.content .right-side .topic-text{
+.content .center-align .topic-text{
   font-size: 23px;
   font-weight: 600;
   color: indigo;
 }
-.right-side .input-box{
+.center-align .input-box{
   height: 50px;
   width: 100%;
   margin: 12px 0;
 }
-.right-side .input-box input,
-.right-side .input-box textarea{
+.center-align .input-box input,
+.center-align .input-box textarea{
   height: 100%;
   width: 100%;
   border: none;
@@ -451,17 +453,17 @@ footer .bottom-details .bottom_text{
   padding: 0 15px;
   resize: none;
 }
-.right-side .message-box{
+.center-align .message-box{
   min-height: 110px;
 }
-.right-side .input-box textarea{
+.center-align .input-box textarea{
   padding-top: 6px;
 }
-.right-side .button{
+.center-align .button{
   display: inline-block;
   margin-top: 12px;
 }
-.right-side .button input[type="button"]{
+.center-align .button input[type="button"]{
   color: white;
   font-size: 18px;
   outline: none;
@@ -476,45 +478,40 @@ footer .bottom-details .bottom_text{
   background: rebeccapurple;
 }
 @media (max-width: 950px) {
-  .container{
+  .contactcont{
     width: 90%;
     padding: 30px 40px 40px 35px ;
   }
-  .container .content .right-side{
+  .contactcont .content .center-align{
    width: 75%;
    margin-left: 55px;
 }
 }
 @media (max-width: 820px) {
-  .container{
+  .contactcont{
     margin: 40px 0;
     height: 100%;
   }
-  .container .content{
+  .contactcont .content{
     flex-direction: column-reverse;
   }
- .container .content .left-side{
+ .contactcont .content .left-side{
    width: 100%;
    flex-direction: row;
    margin-top: 40px;
    justify-content: center;
    flex-wrap: wrap;
  }
- .container .content .left-side::before{
+ .contactcont .content .left-side::before{
    display: none;
  }
- .container .content .right-side{
+ .contactcont .content .center-align{
    width: 100%;
    margin-left: 0;
  }
 }
 
 /*----------------------------LOGIN------------------------------*/
-/* body{
-  min-height: 100vh;
-  width: 100%;
-  background: indigo;
-} */
 .container{
   position: absolute;
   top: 50%;
