@@ -1,0 +1,278 @@
+/* styles.css */
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+
+/* Typography */
+h2 {
+    color: #2d3748;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h3 {
+    color: #4a5568;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 30px 0 20px 0;
+    text-align: center;
+}
+
+p {
+    color: #718096;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+form {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Button Styles */
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#login, #saveMood {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+#signup {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+#logout {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 30px;
+}
+
+/* Message Section */
+#message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    background: #f8fafc;
+    border: none;
+    color: #718096;
+    /*border-left: 3px solid #e2e8f0;*/
+}
+
+/* Success/Error message states */
+.message-success {
+    background: #f0fff4;
+    /*border-left: 3px solid #48bb78;*/
+    color: #2f855a;
+}
+
+.message-error {
+    background: #fff5f5;
+    /*border-left: 3px solid #f56565;*/
+    color: #c53030;
+}
+
+.message-info {
+    background: #edf2f7;
+   /* border-left: 3px solid #667eea;*/
+    color: #4a5568;
+}
+
+/* Mood List Styles */
+#moodList {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#moodList li {
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+#moodList li:hover {
+    transform: translateX(5px);
+}
+
+.mood-date {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    form {
+        padding: 15px;
+    }
+}
+
+/* Animation for mood entries */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#moodList li {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Loading state for buttons */
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}

@@ -1,0 +1,37 @@
+✓ setup the firebase project + authentication. 
+✓ sign up functionality
+
+▢ Login
+▢ Logout
+Once the user logs in:
+- they should be redirected to the app page
+- use functions provided by the Firebase Authentication library documentation (https://firebase.google.com/docs/auth/web/start)
+
+- observer function "onAuthStateChanged"
+- explore what is it?
+- how to use it in the application
+
+▢ submit
+- Github link
+- A document
+    - learnings from this assignment
+    - what was easy?
+    - what was challenging?
+    - what is onAuthStateChanged
+    - how did you implement it?
+
+------------------------------------------------------------------------
+
+implement
+- the Login Functionality in the index.html page 
+- the Logout Functionality in the app.html
+- create a new app.js for the app.html page
+- do the same logic we did with the signup button in the index.html
+    - we added an event listener to call a custom function we created in auth.js
+
+- create two more custom function inside auth.js to take care of calling the corresponding login and logout from firebase
+https://firebase.google.com/docs/auth/web/start#sign_in_existing_users (Sign In example code snippet)
+https://firebase.google.com/docs/auth/web/password-auth#next_steps (Sign out example code snippet)
+
+onAuthStateChanged
+https://firebase.google.com/docs/auth/web/start#set_an_authentication_state_observer_and_get_user_data

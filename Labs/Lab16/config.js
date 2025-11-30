@@ -1,28 +1,8 @@
 export const firebaseConfig = {
-    apiKey: "AIzaSyB1b800b4YL9HHuw-7Wb4qhHpZ6IhylpEE",
-    authDomain: "raseentlu.firebaseapp.com",
-    projectId: "raseentlu",
-    storageBucket: "raseentlu.firebasestorage.app",
-    messagingSenderId: "325890582632",
-    appId: "1:325890582632:web:f9a1d8414963c4825df3dd"
-};
-
-{/* <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyB1b800b4YL9HHuw-7Wb4qhHpZ6IhylpEE",
-    authDomain: "raseentlu.firebaseapp.com",
-    projectId: "raseentlu",
-    storageBucket: "raseentlu.firebasestorage.app",
-    messagingSenderId: "325890582632",
-    appId: "1:325890582632:web:f9a1d8414963c4825df3dd"
+    apiKey: "AIzaSyDApVJVKW6RL7X6GK76QxBJ9jCHyU9a8nc",
+    authDomain: "testingfirebase-5c006.firebaseapp.com",
+    projectId: "testingfirebase-5c006",
+    storageBucket: "testingfirebase-5c006.firebasestorage.app",
+    messagingSenderId: "923413665284",
+    appId: "1:923413665284:web:02a42be126916241c30751"
   };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script> */}

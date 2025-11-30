@@ -1,0 +1,14 @@
+HW 10 submission document
+- learnings from this assignment
+    ->
+- what was easy?
+    ->
+- what was challenging?
+    ->
+- what is onAuthStateChanged
+    ->
+- how did you implement it
+    -> i followed a tutorial by Aaron Dunn
+    -> he details how to use Firebase for authentication
+    -> he uses terminal for installation for some functionality, but i implemented script only
+    
