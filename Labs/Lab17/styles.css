@@ -1,0 +1,389 @@
+/* styles.css */
+
+/* ===== Base Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Centered content container */
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+
+/* ===== Typography ===== */
+h2 {
+    color: #2d3748;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    color: #4a5568;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 30px 0 15px 0;
+    text-align: center;
+}
+
+p {
+    color: #718096;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===== Top Navigation ===== */
+nav.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+#userInfo {
+    font-weight: 500;
+    color: #4a5568;
+}
+
+/* ===== Form Styles ===== */
+form {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 12px 26px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#login, #saveMood, #saveEntryBtn, #addEntryBtn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 0.9rem;
+}
+
+#signup {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+#logout {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== Entry List Styles ===== */
+/* Entry header */
+.entries-header li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #e2e8f0;
+    background-color: #f1f5f9;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+}
+
+.entries-header .entry-title {
+    flex: 2;  /* same as entries */
+}
+
+.entries-header .entry-date {
+    flex: 1;  /* same as entries */
+}
+
+.entries-header .entry-actions {
+    flex: 0;  /* same as entries */
+}
+
+.entries-list {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Entry row */
+.entries-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.entries-list li:hover {
+    transform: translateX(5px);
+}
+
+/* Entry columns */
+.entry-title {
+    flex: 2; /* takes more space */
+    font-weight: 500;
+}
+
+.entry-date {
+    flex: 1;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Actions container */
+.entry-actions {
+    flex: 0; /* only takes as much as buttons need */
+    display: flex;
+    gap: 5px;
+}
+
+/* Edit/Delete buttons */
+.entry-actions button {
+    padding: 5px 10px;       /* small size */
+    font-size: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Specific button colors */
+.editEntryBtn {
+    background: #48bb78;
+    color: white;
+}
+
+.deleteEntryBtn {
+    background: #f56565;
+    color: white;
+}
+
+/* Hover effect */
+.entry-actions button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* ===== Editor Specific ===== */
+#entryContent {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* ===== Message Section ===== */
+#message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.message-success { background: #f0fff4; color: #2f855a; }
+.message-error { background: #fff5f5; color: #c53030; }
+.message-info { background: #edf2f7; color: #4a5568; }
+
+/* ===== Visibility Dropdown ===== */
+#entryVisibility {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#entryVisibility:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ===== Archive Checkbox ===== */
+#archiveArea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#archiveArea label {
+    font-size: 1rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+#entryArchived {
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea; /* checkbox color in supported browsers */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#entryArchived:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    body {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+
+    form { padding: 20px; }
+
+    .entries-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .entry-actions {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    nav.top-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    form { padding: 15px; }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    #archiveArea {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    #entryVisibility {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+
+    .entries-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .entry-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
