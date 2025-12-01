@@ -1,19 +1,17 @@
-import { logout, observeAuthState, signOut } from './auth.js';
+import { logout, observeAuthState } from './auth.js';
 
 const logoutBtn = document.getElementById("logout");
-const messageDiv = document.getElementById("message");
 
-// LOGOUT
-logoutBtn.addEventListener("click", () => {
-    signOut(auth).then(() => {
-    // Sign-out successful.
-    }).catch((error) => {
-    // An error happened.
-    });
-    console.log('logiut clicked');
-    
+// LOGOUT BUTTON
+logoutBtn.addEventListener("click", async () => {
+    try {
+        await logout();
+    } catch (error) {
+        console.log(error);
+    }
 });
 
+// OBSERVE AUTHENTICATION STATE
 observeAuthState((user) => {
     if (!user) {
         window.location.href = "index.html";
