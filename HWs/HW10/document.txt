@@ -1,14 +1,17 @@
 HW 10 submission document
 - learnings from this assignment
-    ->
+    -> it is very important to know which function goes in which JS file
 - what was easy?
-    ->
+    -> implelemting the fucntions from Firebase documentation
 - what was challenging?
-    ->
+    -> figuring out which JS file will have the documentation functions and which file will have the event listener
+    -> next time, i will use only one JS file as a beginner
 - what is onAuthStateChanged
-    ->
+    -> it checks the authorization state of a logged in user
+    -> it makes sure that the page is only visible once a user has logged in
 - how did you implement it
     -> i followed a tutorial by Aaron Dunn
     -> he details how to use Firebase for authentication
     -> he uses terminal for installation for some functionality, but i implemented script only
-    
+    -> it was easy to follow, but it was hard to compare which part of the code goes in which file
+    -> he only had one main.js file, detailing which function should be written before the event listener or such
