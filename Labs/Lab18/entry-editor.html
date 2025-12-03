@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entry - Personal Reflection Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+
+<body>
+    <header>
+        <!--<h1 id="editorTitle">Loading...</h1>-->
+        <button onclick="window.location.href='app.html'">Back to Dashboard</button>
+    </header>
+
+    <main>
+        <form id="entryEditorForm">
+
+            <!-- Title -->
+            <label>Title</label>
+            <input type="text" id="entryTitle" placeholder="Enter title " required/>
+
+            <!-- Content -->
+            <label>Content</label>
+            <textarea id="entryContent" placeholder="Write your thoughts..." required></textarea>
+
+            <!-- Tags -->
+            <label>Tags (comma-separated)</label>
+            <input type="text" id="entryTags" placeholder="e.g. personal, ideas, work" />
+
+            <!-- Visibility -->
+            <label>Visibility</label>
+            <select id="entryVisibility">
+                <option value="private" selected>Private</option>
+                <option value="public">Public</option>
+            </select>
+
+            <!-- Archive Option (Edit mode only) -->
+            <div id="archiveArea" style="display: block;">
+                <label>Archived</label>
+                <input type="checkbox" id="entryArchived" />
+            </div>
+
+            <!-- Action buttons -->
+            <button type="submit" id="saveEntryBtn">Save Entry</button>
+            <button type="button" id="cancelEntryBtn">Cancel</button>
+        </form>
+    </main>
+</body>
+
+</html>

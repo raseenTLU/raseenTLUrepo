@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Personal Reflection Journal</title>
+
+  <script type="module" src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <nav class="top-nav">
+    <span id="userInfo"></span>
+    <h2>Personal Reflection Journal</h2>  
+    <button id="logout">Log Out</button>
+  </nav>
+
+  <section id="message"></section>
+
+  <main>
+    <p id="noEntriesMsg" style="display: none;">No entries yet. Click “New Entry” to start.</p>
+    <button id="addEntryBtn">➕ New Entry</button>
+     <!-- Entries Header -->
+    <ul class="entries-header">
+      <li>
+        <div class="entry-title"><strong>Title</strong></div>
+        <div class="entry-date"><strong>Date</strong></div>
+        <div class="entry-actions"><strong>Actions</strong></div>
+      </li>
+    </ul>
+
+    <!-- Display entries in a list or table -->
+    <ul id="entriesList" class="entries-list">
+      <!-- Each entry will be dynamically inserted here -->
+      <!-- Example structure (generated via JS): -->
+      <li data-id="entry1">
+        <div class="entry-title">Entry Title</div>
+        <div class="entry-date">2025-01-01</div>
+        <div class="entry-actions">
+          <button class="editEntryBtn">Edit</button>
+          <button class="deleteEntryBtn">Delete</button>
+        </div>
+      </li>
+      
+    </ul>
+  </main>
+</body>
+</html>

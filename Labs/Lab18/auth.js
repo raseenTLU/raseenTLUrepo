@@ -4,7 +4,8 @@ import {  createUserWithEmailAndPassword,
           signInWithEmailAndPassword,
           signOut,
           onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import { auth } from "./firebase.js";
+import { auth } from './firebase.js'
+
 
   export const signup = async (email, password) => {
     try {
@@ -45,13 +46,9 @@ import { auth } from "./firebase.js";
     }
   }
 
-  export const onAuthChange = (callback)=>{
-    return onAuthStateChange(auth, user => {
+  
+  export const onChangeAuth = (callback)=>{
+    return onAuthStateChanged(auth, user => {
       callback(user)
     })
   }
-
-  // export const onChangeAuth = (callback) => {
-  //   return onAuthStateChanged(auth, callback);
-  //     callback(user)
-  // }
