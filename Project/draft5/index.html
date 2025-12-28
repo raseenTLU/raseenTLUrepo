@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Plan | Symc</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home | Symc</title> 
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-</head>
+  </head>
+  
 <body>
   <nav>
+  <!--- NAVIGATION ---->
     <div class="menu">
       <div class="logo">
         <a href="index.html">Symc</a>
+        <i class="fa-solid fa-clapperboard" style="color: #7e40a3;"></i>
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -23,29 +26,36 @@
     </div>
   </nav>
 
-  <div class="auth-container">
-    <div class="auth-box">
-      <header>Join a Movie Plan</header>
-      <div class="image">
-        <img src="assets/blue-board.jpg" alt="blue clapperboard with popcorn and movie glasses">
-      </div>
-      <form action="#">
-        <input type="text" placeholder="Enter plan code" required>
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <textarea placeholder="Message to organizer (optional)" rows="3"></textarea>
-        <input type="submit" class="button" value="Join Plan">
-      </form>
-      <div class="auth-footer">
-        <span>Want to create your own plan? 
-         <a href="create.html">Create here</a>
-        </span>
-      </div>
-    </div>
-  </div>
+<!----- HERO -------->
+<section class="hero">
+  <div class="center">
 
+    <div class="hero-txt"><p>Plan your perfect movie</p><p>night with friends</p></div>
+    <div class="hero-subtxt"><p>No more endless group chats. Find the movie,</p><p>time, and theater that works for everyone.</p></div>
+    
+    <div class="image">
+      <img src="assets/hero-img.jpg" alt="Purple clapperboard with sunglasses">
+    </div>
+
+    <div class="btns">
+      <a href="create.html"><button>Create Plan</button></a>
+      <a href="join.html"><button class="sec">Join Plan</button></a>
+    </div>
+
+  </div>
+</section>
+
+<!----- FEATURES ------>
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">Why Choose Symc?</h2>
+    <p class="section-subtitle">The easiest way to coordinate movie nights</p>
+    <!-- content -->
+  </div>
+</section>
 
   <footer>
+  <!---- FOOTER ---->
     <div class="content">
       <div class="link-boxes">
         <ul class="box">
@@ -75,7 +85,7 @@
     </div>
     <div class="bottom-details">
       <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a> All rights reserved</span>
+        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a>All rights reserved</span>
         <span class="policy_terms">
           <a href="privacy.html">Privacy policy</a>
           <a href="terms.html">Terms & condition</a>
@@ -83,5 +93,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>

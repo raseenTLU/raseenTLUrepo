@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote | Symc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="index.html">Symc</a>
+      </div>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><button id="logoutBtn">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="vote-container">
+    <h1 id="sessionTitle">Loading...</h1>
+        <p>Share this code with friends: <strong id="inviteCode">...</strong></p>
+    
+    <form id="voteForm">
+      <h2>Pick Your Movies</h2>
+        <label><input type="checkbox" name="movies" value="movie1"> Movie 1</label>
+        <label><input type="checkbox" name="movies" value="movie2"> Movie 2</label>
+        <label><input type="checkbox" name="movies" value="movie3"> Movie 3</label>
+      
+      <h2>Your Available Dates</h2>
+        <label><input type="checkbox" name="dates" value="2025-01-05"> Jan 5, 2026</label>
+        <label><input type="checkbox" name="dates" value="2025-01-06"> Jan 6, 2026</label>
+        <label><input type="checkbox" name="dates" value="2025-01-07"> Jan 7, 2026</label>
+      
+      <h2>Preferred Cinemas</h2>
+        <label><input type="checkbox" name="cinemas" value="cinema1"> Cinema 1</label>
+        <label><input type="checkbox" name="cinemas" value="cinema2"> Cinema 2</label>
+      
+      <button type="submit">Submit Vote</button>
+    </form>
+  </div>
+
+  <script type="module" src="vote.js"></script>
+  <script type="module">
+  import { auth } from './firebase-config.js';
+  import { signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+  
+  document.getElementById('logoutBtn').addEventListener('click', async () => {
+      await signOut(auth);
+      window.location.href = 'login.html';
+  });
+  </script>
+
+</body>
+</html>

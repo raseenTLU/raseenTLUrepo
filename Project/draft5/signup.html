@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Plan | Symc</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sign Up | Symc</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
+
 <body>
   <nav>
     <div class="menu">
@@ -24,26 +25,30 @@
   </nav>
 
   <div class="auth-container">
+
     <div class="auth-box">
-      <header>Join a Movie Plan</header>
-      <div class="image">
-        <img src="assets/blue-board.jpg" alt="blue clapperboard with popcorn and movie glasses">
-      </div>
-      <form action="#">
-        <input type="text" placeholder="Enter plan code" required>
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <textarea placeholder="Message to organizer (optional)" rows="3"></textarea>
-        <input type="submit" class="button" value="Join Plan">
-      </form>
+      <header>Sign Up</header>
+
+        <div class="image">
+            <img src="assets/popcorn.jpg" alt="shy popcorn standing">
+        </div>
+
+        <form id="signupForm">
+          <input type="text" id="signupName" placeholder="Enter your full name" required>
+          <input type="email" id="signupEmail" placeholder="Enter your email" required>
+          <input type="password" id="signupPassword" placeholder="Create a password" required>
+          <button type="submit">Sign Up</button>
+          <p id="signupError" class="error"></p>
+        </form>
+
       <div class="auth-footer">
-        <span>Want to create your own plan? 
-         <a href="create.html">Create here</a>
+        <span>Already have an account? 
+         <a href="login.html">Login</a>
         </span>
       </div>
+
     </div>
   </div>
-
 
   <footer>
     <div class="content">
@@ -75,7 +80,7 @@
     </div>
     <div class="bottom-details">
       <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a> All rights reserved</span>
+        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a>All rights reserved</span>
         <span class="policy_terms">
           <a href="privacy.html">Privacy policy</a>
           <a href="terms.html">Terms & condition</a>
@@ -83,5 +88,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="signup.js" type="module" defer></script>
+
 </body>
 </html>

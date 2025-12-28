@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Plan | Symc</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <title>Dashboard | Symc</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" type="module" defer></script>
 </head>
+
 <body>
   <nav>
     <div class="menu">
@@ -17,33 +19,33 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="create.html">Create Plan</a></li>
         <li><a href="join.html">Join Plan</a></li>
-        <li><a href="login.html">Sign In</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><button id="logoutBtn">Logout</button></li>
       </ul>
     </div>
   </nav>
 
-  <div class="auth-container">
-    <div class="auth-box">
-      <header>Join a Movie Plan</header>
-      <div class="image">
-        <img src="assets/blue-board.jpg" alt="blue clapperboard with popcorn and movie glasses">
-      </div>
-      <form action="#">
-        <input type="text" placeholder="Enter plan code" required>
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <textarea placeholder="Message to organizer (optional)" rows="3"></textarea>
-        <input type="submit" class="button" value="Join Plan">
-      </form>
-      <div class="auth-footer">
-        <span>Want to create your own plan? 
-         <a href="create.html">Create here</a>
-        </span>
-      </div>
+  <div class="dashboard-container">
+    <h1>Welcome, <span id="userName">User</span>!</h1>
+    <p>Email: <span id="userEmail"></span></p>
+    
+    <div class="dashboard-sections">
+      
+      <section>
+        <h2>Your Movie Plans</h2>
+        <div id="userPlans">
+          <p>No plans yet. <a href="create.html">Create your first plan!</a></p>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Quick Actions</h2>
+        <a href="create.html" class="action-btn">Create New Plan</a>
+        <a href="join.html" class="action-btn">Join a Plan</a>
+      </section>
+
     </div>
   </div>
-
 
   <footer>
     <div class="content">
@@ -75,7 +77,7 @@
     </div>
     <div class="bottom-details">
       <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a> All rights reserved</span>
+        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a>All rights reserved</span>
         <span class="policy_terms">
           <a href="privacy.html">Privacy policy</a>
           <a href="terms.html">Terms & condition</a>
@@ -83,5 +85,9 @@
       </div>
     </div>
   </footer>
+
+  <script type="module" src="dashboard.js"></script>
+
 </body>
 </html>
+

@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a Plan | Symc</title> 
+    <title>Create Plan | Symc</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-  </head>
+</head>
 <body>
   <nav>
-  <!------------------------- NAVIGATION --------------------------->
     <div class="menu">
       <div class="logo">
         <a href="index.html">Symc</a>
-        <i class="fa-solid fa-clapperboard" style="color: #7e40a3;"></i>
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -24,31 +22,29 @@
       </ul>
     </div>
   </nav>
-  <!-------------------- HERO ---------------------------------->
-<section class="create">
-  <div class="center">
-    <div class="hero-txt"><p>Make a New Plan</p></div>
-    <div class="hero-subtxt">
-        <p>Choose your preferred movie, dates, and theaters.</p>
-        <p>Then share the plan code with your friends so</p>
-        <p>they can vote on their favorites!</p>
-    </div>
-    <div class="image">
-      <img src="assets/purple-film.jpg" alt="Purple clapperboard with sunglasses">
-    </div>
-    <div class="content">
-        <div class="center-align">
-            <div class="input-box">
-                <input type="text" placeholder="Enter your name">
-            </div>
-        </div>
-    </div>
-    <div class="btns">
-      <a href="create.html"><button>Create Plan</button></a>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <header>Create a Movie Plan</header>
+      <div class="image">
+        <img src="assets/blue-board.jpg" alt="blue clapperboard with popcorn and movie glasses">
+      </div>
+      <form action="#">
+        <input type="text" placeholder="Plan name (e.g., Friday Movie Night)" required>
+        <input type="text" placeholder="Movie title" required>
+        <input type="date" placeholder="Date" required>
+        <input type="time" placeholder="Time" required>
+        <input type="text" placeholder="Cinema location" required>
+        <input type="submit" class="button" value="Create Plan">
+      </form>
+      <div class="auth-footer">
+        <span>Want to join an existing plan? 
+         <a href="join.html">Join here</a>
+        </span>
+      </div>
     </div>
   </div>
-</section>
-  <!----------------------------- FOOTER --------------------------------->
+
   <footer>
     <div class="content">
       <div class="link-boxes">
@@ -79,7 +75,7 @@
     </div>
     <div class="bottom-details">
       <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a>All rights reserved</span>
+        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a> All rights reserved</span>
         <span class="policy_terms">
           <a href="privacy.html">Privacy policy</a>
           <a href="terms.html">Terms & condition</a>

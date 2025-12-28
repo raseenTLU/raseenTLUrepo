@@ -182,6 +182,376 @@ nav .menu{
   }
 }
 
+/* ============ HOMEPAGE SECTIONS ============ */
+
+/* Container for all sections */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* ========== FEATURES SECTION ========== */
+.features {
+  padding: 80px 20px;
+  background: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, rebeccapurple, indigo);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ========== HOW IT WORKS SECTION ========== */
+.how-it-works {
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.step {
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background: rebeccapurple;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(103, 80, 164, 0.3);
+}
+
+.step-content {
+  margin-top: 20px;
+}
+
+.step-content h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.step-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.step-icon {
+  text-align: center;
+  font-size: 48px;
+  color: rebeccapurple;
+  opacity: 0.2;
+}
+
+/* ========== TRENDING MOVIES SECTION ========== */
+.trending {
+  padding: 80px 20px;
+  background: white;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 20px;
+}
+
+.movie-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.movie-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.movie-meta i {
+  color: gold;
+}
+
+.btn-small {
+  width: 100%;
+  padding: 10px;
+  background: rebeccapurple;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+  background: indigo;
+  transform: translateY(-2px);
+}
+
+/* ========== TESTIMONIALS SECTION ========== */
+.testimonials {
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  color: gold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.testimonial-author h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.testimonial-author p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ========== CTA SECTION ========== */
+.cta {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, rebeccapurple, indigo);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.btn-primary-large,
+.btn-secondary-large {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-large {
+  background: white;
+  color: rebeccapurple;
+}
+
+.btn-primary-large:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary-large {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary-large:hover {
+  background: white;
+  color: rebeccapurple;
+  transform: translateY(-3px);
+}
+
+.cta-note {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .section-subtitle {
+    font-size: 16px;
+  }
+  
+  .features,
+  .how-it-works,
+  .trending,
+  .testimonials {
+    padding: 50px 20px;
+  }
+  
+  .cta {
+    padding: 60px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 28px;
+  }
+  
+  .cta-content p {
+    font-size: 16px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-primary-large,
+  .btn-secondary-large {
+    width: 100%;
+  }
+}
 /* ------------------------ FOOTER ----------------------------- */
 footer{
   background: indigo;
@@ -510,7 +880,44 @@ footer .bottom-details .bottom_text{
    margin-left: 0;
  }
 }
+/*---------------------------- TEXT AREA ------------------------------*/
+/* Add this to your auth-box form section */
+.auth-box form textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Oxygen', sans-serif;
+  resize: vertical;
+  margin-bottom: 20px;
+}
 
+.auth-box form textarea:focus {
+  border-color: rebeccapurple;
+}
+
+/* Make date and time inputs consistent */
+.auth-box form input[type="date"],
+.auth-box form input[type="time"] {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.auth-box form input[type="date"]:focus,
+.auth-box form input[type="time"]:focus {
+  border-color: rebeccapurple;
+}
 /*----------------------------LOGIN------------------------------*/
 .container{
   position: absolute;

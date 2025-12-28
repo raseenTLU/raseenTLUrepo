@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test</title></head>
+<body>
+    <h1>Testing Firebase</h1>
+    <p id="status">Loading...</p>
+
+    <script type="module">
+    import { auth } from './firebase-config.js';
+    
+    console.log("Auth object:", auth);
+    document.getElementById('status').textContent = "Firebase loaded! Check console.";
+    </script>
+</body>
+</html>

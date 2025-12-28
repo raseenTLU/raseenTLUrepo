@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | Symc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="index.html">Symc</a>
+      </div>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><button id="logoutBtn">Logout</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="results-container">
+    <h1>Voting Results</h1>
+    
+    <section>
+      <h2>Top Movies</h2>
+      <div id="movieResults"></div>
+    </section>
+    
+    <section>
+      <h2>Best Dates</h2>
+      <div id="dateResults"></div>
+    </section>
+    
+    <section>
+      <h2>Preferred Cinemas</h2>
+      <div id="cinemaResults"></div>
+    </section>
+  </div>
+
+  <script type="module" src="results.js"></script>
+  <script type="module">
+  import { auth } from './firebase-config.js';
+  import { signOut } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+  
+  document.getElementById('logoutBtn').addEventListener('click', async () => {
+      await signOut(auth);
+      window.location.href = 'login.html';
+  });
+  </script>
+</body>
+</html>
