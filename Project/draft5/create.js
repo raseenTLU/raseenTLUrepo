@@ -3,11 +3,11 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/fi
 import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
 // protect page
-// onAuthStateChanged(auth, (user) => {
-//     if (!user) {
-//         window.location.href = 'login.html';
-//     }
-// });
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+        window.location.href = 'login.html';
+    }
+});
 
 // random invite code
 function generateInviteCode() {

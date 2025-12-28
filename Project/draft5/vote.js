@@ -2,6 +2,31 @@ import { auth, db } from './firebase-config.js';
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 import { doc, getDoc, collection, setDoc } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
+const API_KEY = '050e10fb491f474c20e03b7421aae916';
+
+// load popular movies from API
+async function loadMovies() {
+    try {
+        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`); // FETCH = TMDB popular movies endpoint, ask API for data
+        const data = await response.json(); // PARSE = JSON response, convert API response to usable format
+        
+        const moviesContainer = document.getElementById('moviesContainer');
+        moviesContainer.innerHTML = '<h2>Pick Your Movies</h2>';
+        
+        // show first 10 movies
+        data.results.slice(0, 10).forEach(movie => { // LOOP = go through each movie in results, limit to 10
+            const label = document.createElement('label');
+            label.innerHTML = `
+                <input type="checkbox" name="movies" value="${movie.id}">
+                ${movie.title}
+            `; // CREATE = checkbox for each movie, set value to movie ID and display title
+            moviesContainer.appendChild(label);
+        });
+    } catch (error) {
+        console.error('Error loading movies:', error);
+    }
+}
+
 let sessionId = null;
 
 // fetch session ID from URL
@@ -14,13 +39,14 @@ if (!sessionId) {
 }
 
 // protect page
-// onAuthStateChanged(auth, async (user) => {
-//     if (!user) {
-//         window.location.href = 'login.html';
-//     } else {
-//         await loadSessionInfo();
-//     }
-// });
+onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+        window.location.href = 'login.html';
+    } else {
+        await loadSessionInfo();
+        await loadMovies();
+    }
+});
 
 // load session info
 async function loadSessionInfo() {
@@ -42,7 +68,7 @@ const voteForm = document.getElementById('voteForm');
 voteForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // fecth selected values (***customize this based on your form)
+    // fetch selected values (***customize this based on form***)
     const selectedMovies = Array.from(document.querySelectorAll('input[name="movies"]:checked'))
         .map(cb => cb.value);
     const selectedDates = Array.from(document.querySelectorAll('input[name="dates"]:checked'))
@@ -51,7 +77,7 @@ voteForm.addEventListener('submit', async (e) => {
         .map(cb => cb.value);
     
     try {
-        // save vote to Firestore
+        // save vote to firestore
         await setDoc(doc(db, 'sessions', sessionId, 'votes', auth.currentUser.uid), {
             userId: auth.currentUser.uid,
             userName: auth.currentUser.displayName,

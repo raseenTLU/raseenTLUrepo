@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>Testing Movie API</h1>
+    <div id="movies"></div>
+
+    <script>
+    const API_KEY = '050e10fb491f474c20e03b7421aae916'; 
+    const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+
+    async function getMovies() {
+        try {
+            const response = await fetch(API_URL);
+            const data = await response.json();
+            
+            console.log('Movies:', data.results);
+            
+            const moviesDiv = document.getElementById('movies');
+            data.results.slice(0, 5).forEach(movie => {
+                moviesDiv.innerHTML += `<p>${movie.title}</p>`;
+            });
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    getMovies();
+    </script>
+</body>
+</html>
