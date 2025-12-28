@@ -68,7 +68,7 @@ const voteForm = document.getElementById('voteForm');
 voteForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // fetch selected values (***customize this based on form***)
+    // fetch selected values (***CUSTOMIZE BASED ON FORM***)
     const selectedMovies = Array.from(document.querySelectorAll('input[name="movies"]:checked'))
         .map(cb => cb.value);
     const selectedDates = Array.from(document.querySelectorAll('input[name="dates"]:checked'))

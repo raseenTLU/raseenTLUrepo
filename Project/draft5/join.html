@@ -33,23 +33,21 @@
         <img src="assets/popcorn-soda.jpg" alt="popcorn and soda looking excited">
       </div>
 
-      <form action="#">
-        <input type="text" placeholder="Enter plan code" required>
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
+      <form id="joinSessionForm">
+        <input type="text" id="inviteCodeInput" placeholder="Enter invite code" required>
         <textarea placeholder="Message to organizer (optional)" rows="3"></textarea>
-        <input type="submit" value="Join Plan">
+        <button type="submit">Join Plan</button>
+        <p id="joinError" class="error"></p>
       </form>
 
       <div class="auth-footer">
         <span>Want to create your own plan? 
-         <a href="create.html">Create here</a>
+        <a href="create.html">Create here</a>
         </span>
       </div>
 
     </div>
   </div>
-
 
   <footer>
     <div class="content">
@@ -89,6 +87,8 @@
       </div>
     </div>
   </footer>
+
+  <script type="module" src="join.js"></script>
 
 </body>
 </html>
