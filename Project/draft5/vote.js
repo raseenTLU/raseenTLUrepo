@@ -3,6 +3,7 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/fi
 import { doc, getDoc, collection, setDoc } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
 const API_KEY = '050e10fb491f474c20e03b7421aae916';
+let allMovieElements = []; // store all movie labels for searching
 
 // load popular movies from API
 async function loadMovies() {
@@ -13,20 +14,47 @@ async function loadMovies() {
         const moviesContainer = document.getElementById('moviesContainer');
         moviesContainer.innerHTML = '<h2>Pick Your Movies</h2>';
         
-        // show first 10 movies
-        data.results.slice(0, 10).forEach(movie => { // LOOP = go through each movie in results, limit to 10
+        allMovieElements = []; // clear previous movies
+        
+        // create checkbox for each movie
+        data.results.slice(0, 20).forEach(movie => { // LOOP = go through each movie in results, limit to 20
             const label = document.createElement('label');
+            label.className = 'movie-option'; // add class for styling
             label.innerHTML = `
                 <input type="checkbox" name="movies" value="${movie.id}">
                 ${movie.title}
-            `; // CREATE = checkbox for each movie, set value to movie ID and display title
+            `;// CREATE = checkbox for each movie, set value to movie ID and display title
             moviesContainer.appendChild(label);
+            allMovieElements.push(label); // save reference
         });
+        
+        // enable search after movies load
+        setupSearch();
+        
     } catch (error) {
         console.error('Error loading movies:', error);
     }
 }
 
+// search function
+function setupSearch() {
+    const searchBox = document.getElementById('movieSearch');
+    
+    searchBox.addEventListener('input', (e) => { // runs every time user types
+        const searchText = e.target.value.toLowerCase(); // makes search case insensitive
+        
+        // filter movies based on search
+        allMovieElements.forEach(label => {
+            const movieTitle = label.textContent.toLowerCase();
+            
+            if (movieTitle.includes(searchText)) { // CHECK if title contains search text
+                label.style.display = 'block';
+            } else {
+                label.style.display = 'none';
+            }
+        });
+    });
+}
 let sessionId = null;
 
 // fetch session ID from URL
