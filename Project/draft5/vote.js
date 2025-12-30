@@ -4,8 +4,9 @@ import { doc, getDoc, collection, setDoc } from "https://www.gstatic.com/firebas
 
 const API_KEY = '050e10fb491f474c20e03b7421aae916';
 let allMovieElements = []; // store all movie labels for searching
+let moviesData = []; // store original movie data
 
-// load popular movies from API
+// load popular movies from API to display as options
 async function loadMovies() {
     try {
         const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`); // FETCH = TMDB popular movies endpoint, ask API for data
@@ -15,28 +16,65 @@ async function loadMovies() {
         moviesContainer.innerHTML = '<h2>Pick Your Movies</h2>';
         
         allMovieElements = []; // clear previous movies
+        moviesData = data.results.slice(0, 20); // store movie data, limit to 20
         
-        // create checkbox for each movie
-        data.results.slice(0, 20).forEach(movie => { // LOOP = go through each movie in results, limit to 20
+        moviesData.forEach(movie => {
             const label = document.createElement('label');
             label.className = 'movie-option'; // add class for styling
+            label.dataset.genres = movie.genre_ids.join(','); // store genres on element
             label.innerHTML = `
                 <input type="checkbox" name="movies" value="${movie.id}">
                 ${movie.title}
-            `;// CREATE = checkbox for each movie, set value to movie ID and display title
+            `; // CREATE = checkbox for each movie, set value to movie ID and display title
             moviesContainer.appendChild(label);
             allMovieElements.push(label); // save reference
         });
         
-        // enable search after movies load
-        setupSearch();
+        setupSearch(); // enable search after movies load
+        setupFilters(); // enable filter buttons
         
     } catch (error) {
         console.error('Error loading movies:', error);
     }
 }
 
-// search function
+// filter function that shows/hides movies based on genre buttons
+function setupFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const genreId = button.dataset.genre; // get genre from button
+            
+            // remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // add active class to clicked button
+            button.classList.add('active');
+            
+            // show all movies if "All" clicked
+            if (genreId === 'all') {
+                allMovieElements.forEach(label => {
+                    label.style.display = 'block';
+                });
+                return;
+            }
+            
+            // filter by genre
+            allMovieElements.forEach(label => {
+                const movieGenres = label.dataset.genres.split(',');
+                
+                // does this movie have the selected genre?
+                if (movieGenres.includes(genreId)) {
+                    label.style.display = 'block';
+                } else {
+                    label.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// search function that filters movies as user types
 function setupSearch() {
     const searchBox = document.getElementById('movieSearch');
     
@@ -76,7 +114,7 @@ onAuthStateChanged(auth, async (user) => {
     }
 });
 
-// load session info
+// load session info from firestore
 async function loadSessionInfo() {
     try {
         const sessionDoc = await getDoc(doc(db, 'sessions', sessionId));

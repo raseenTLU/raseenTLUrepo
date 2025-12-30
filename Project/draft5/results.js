@@ -3,69 +3,103 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/fi
 import { doc, getDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
 let sessionId = null;
+let currentVoteCount = 0; // track how many votes we have
 
-// fetch session ID from URL
 const urlParams = new URLSearchParams(window.location.search);
 sessionId = urlParams.get('session');
 
-// protect page
 onAuthStateChanged(auth, async (user) => {
     if (!user) {
         window.location.href = 'login.html';
     } else {
-        await loadResults();
+        await loadResults(); // load initial results
+        startLiveUpdates(); // start checking for updates
     }
 });
 
+// load results from firestore and display them on page
 async function loadResults() {
     try {
-        // get all votes
         const votesSnapshot = await getDocs(collection(db, 'sessions', sessionId, 'votes'));
+        
+        // check if vote count changed
+        if (votesSnapshot.size !== currentVoteCount) {
+            currentVoteCount = votesSnapshot.size;
+            showUpdateNotification(); // show update notification
+        }
         
         const movieVotes = {};
         const dateVotes = {};
         const cinemaVotes = {};
         
-        // count votes
         votesSnapshot.forEach((voteDoc) => {
             const vote = voteDoc.data();
             
-            // count movies
             vote.moviePreferences.forEach(movie => {
                 movieVotes[movie] = (movieVotes[movie] || 0) + 1;
             });
             
-            // count dates
             vote.availableDates.forEach(date => {
                 dateVotes[date] = (dateVotes[date] || 0) + 1;
             });
             
-            // count cinemas
             vote.cinemaPreferences.forEach(cinema => {
                 cinemaVotes[cinema] = (cinemaVotes[cinema] || 0) + 1;
             });
         });
         
-        // display results
         displayResults('Movie', movieVotes, 'movieResults');
         displayResults('Date', dateVotes, 'dateResults');
         displayResults('Cinema', cinemaVotes, 'cinemaResults');
+        
+        // show total votes
+        document.getElementById('totalVotes').textContent = `Total Votes: ${currentVoteCount}`;
         
     } catch (error) {
         console.error('Error loading results:', error);
     }
 }
 
+// display results in given container element with given votes object,
+// parameterized by label for clarity and elementId
 function displayResults(label, votes, elementId) {
     const container = document.getElementById(elementId);
     container.innerHTML = '';
     
-    // sort by most votes
     const sorted = Object.entries(votes).sort((a, b) => b[1] - a[1]);
+    
+    if (sorted.length === 0) {
+        container.innerHTML = '<p>No votes yet</p>';
+        return;
+    }
     
     sorted.forEach(([item, count]) => {
         const p = document.createElement('p');
         p.textContent = `${item}: ${count} votes`;
         container.appendChild(p);
     });
+}
+
+// live updates on results page
+function startLiveUpdates() {
+    // check for updates
+    setInterval(async () => {
+        await loadResults();
+    }, 5000); // every 5 seconds
+    
+    console.log('Live updates enabled (every 5 seconds)');
+}
+
+// show notification for new votes received
+function showUpdateNotification() {
+    const notification = document.getElementById('updateNotification');
+    if (notification) {
+        notification.style.display = 'block';
+        notification.textContent = 'New votes received!';
+        
+        // hide notification
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 3000); // after 3 seconds
+    }
 }
