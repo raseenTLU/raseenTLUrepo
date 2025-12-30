@@ -22,10 +22,17 @@ async function loadMovies() {
             const label = document.createElement('label');
             label.className = 'movie-option'; // add class for styling
             label.dataset.genres = movie.genre_ids.join(','); // store genres on element
+            
+            // Build poster URL (TMDB base URL + size + poster path)
+            const posterUrl = movie.poster_path 
+                ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` 
+                : 'assets/no-poster.jpg'; // Fallback if no poster
+            
             label.innerHTML = `
                 <input type="checkbox" name="movies" value="${movie.id}">
-                ${movie.title}
-            `; // CREATE = checkbox for each movie, set value to movie ID and display title
+                <img src="${posterUrl}" alt="${movie.title}" class="movie-poster">
+                <span class="movie-title">${movie.title}</span>
+            `;// CREATE = checkbox for each movie, set value to movie ID and display title
             moviesContainer.appendChild(label);
             allMovieElements.push(label); // save reference
         });

@@ -17,6 +17,13 @@ onAuthStateChanged(auth, async (user) => {
     }
 });
 
+onAuthStateChanged(auth, async (user) => {
+    // i removed the redirect to allow anyone to view
+    // intially protected by if (!user) then redirect to login.html
+    await loadResults();
+    startLiveUpdates();
+});
+
 // load results from firestore and display them on page
 async function loadResults() {
     try {
@@ -102,4 +109,21 @@ function showUpdateNotification() {
             notification.style.display = 'none';
         }, 3000); // after 3 seconds
     }
+}
+
+// share functionality
+const shareBtn = document.getElementById('shareResultsBtn');
+if (shareBtn) {
+    shareBtn.addEventListener('click', () => {
+        const resultsUrl = `${window.location.origin}/results.html?session=${sessionId}`;
+        
+        // copy to clipboard
+        navigator.clipboard.writeText(resultsUrl).then(() => {
+            const message = document.getElementById('shareMessage');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 2000);
+        });
+    });
 }
