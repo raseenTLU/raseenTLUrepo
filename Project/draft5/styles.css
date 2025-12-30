@@ -219,8 +219,6 @@ textarea {
     margin: 5px;
     border: 2px solid lightgray;
     border-radius: 4px;
-    background: white;
-    color: black;
     cursor: pointer;
 }
 .filter-btn.active {
