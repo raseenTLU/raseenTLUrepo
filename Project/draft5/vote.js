@@ -100,6 +100,33 @@ function setupSearch() {
         });
     });
 }
+
+// generate date options for next 7 days
+function generateDates() {
+    const datesContainer = document.getElementById('datesContainer');
+    datesContainer.innerHTML = '<h2>Your Available Dates</h2>';
+    
+    // generate next 7 days starting from today
+    for (let i = 0; i < 7; i++) {
+        const date = new Date();
+        date.setDate(date.getDate() + i);
+        
+        const dateString = date.toISOString().split('T')[0]; // format: 2026-01-05
+        const displayDate = date.toLocaleDateString('en-US', { 
+            weekday: 'short', 
+            month: 'short', 
+            day: 'numeric' 
+        }); // format: "Sun, Jan 5"
+        
+        const label = document.createElement('label');
+        label.innerHTML = `
+            <input type="checkbox" name="dates" value="${dateString}">
+            ${displayDate}
+        `;
+        datesContainer.appendChild(label);
+    }
+}
+
 let sessionId = null;
 
 // fetch session ID from URL
@@ -118,6 +145,7 @@ onAuthStateChanged(auth, async (user) => {
     } else {
         await loadSessionInfo();
         await loadMovies();
+        generateDates();
     }
 });
 
