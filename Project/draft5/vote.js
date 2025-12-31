@@ -23,20 +23,28 @@ async function loadMovies() {
             label.className = 'movie-option'; // add class for styling
             label.dataset.genres = movie.genre_ids.join(','); // store genres on element
             
-            // Build poster URL (TMDB base URL + size + poster path)
+            // poster URL (TMDB base URL + size + poster path)
             const posterUrl = movie.poster_path 
                 ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` 
-                : 'assets/no-poster.jpg'; // Fallback if no poster
+                : 'assets/no-poster.jpg'; // fallback if no poster
+            
+            const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
+            const rating = movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A';
+            const overview = movie.overview ? movie.overview.substring(0, 120) + '...' : 'No description available';
             
             label.innerHTML = `
                 <input type="checkbox" name="movies" value="${movie.id}">
                 <img src="${posterUrl}" alt="${movie.title}" class="movie-poster">
-                <span class="movie-title">${movie.title}</span>
+                <div class="movie-info">
+                    <span class="movie-title">${movie.title} <span class="movie-year">(${year})</span></span>
+                    <span class="movie-rating">⭐ ${rating}/10</span>
+                    <p class="movie-overview">${overview}</p>
+                </div>
             `;// CREATE = checkbox for each movie, set value to movie ID and display title
             moviesContainer.appendChild(label);
             allMovieElements.push(label); // save reference
         });
-        
+
         setupSearch(); // enable search after movies load
         setupFilters(); // enable filter buttons
         
@@ -104,7 +112,6 @@ function setupSearch() {
 // generate date options for next 7 days
 function generateDates() {
     const datesContainer = document.getElementById('datesContainer');
-    datesContainer.innerHTML = '<h2>Your Available Dates</h2>';
     
     // generate next 7 days starting from today
     for (let i = 0; i < 7; i++) {
