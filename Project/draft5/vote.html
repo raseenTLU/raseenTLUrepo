@@ -8,63 +8,92 @@
 </head>
 
 <body>
+
   <nav>
     <div class="menu">
       <div class="logo">
         <a href="index.html">Symc</a>
       </div>
       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="create.html">Create Plan</a></li>
+        <li><a href="join.html">Join Plan</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
-        <li><button id="logoutBtn">Logout</button></li>
+        <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
       </ul>
     </div>
   </nav>
+   <!-- session info -->
+    <div class="session-header">
+      <h1 id="sessionTitle">Loading...</h1>
+      <p class="invite-code-text">Share this code with friends: <strong id="inviteCode">...</strong></p>
+    </div>
 
-  <!-- filter buttons -->
-  <div class="filter-container">
-    <h3>Filter by Genre:</h3>
-    <button class="filter-btn" data-genre="all">All</button>
-    <button class="filter-btn" data-genre="28">Action</button>
-    <button class="filter-btn" data-genre="35">Comedy</button>
-    <button class="filter-btn" data-genre="18">Drama</button>
-    <button class="filter-btn" data-genre="878">Sci-Fi</button>
-    <button class="filter-btn" data-genre="27">Horror</button>
-  </div>
-  
-  <!-- search box -->
-  <div class="search-container">
-    <input type="text" id="movieSearch" placeholder="Search movies...">
-  </div>
-
-  <!-- movies display -->
-  <div id="moviesContainer">
-      <!-- <p>Loading movies...</p> -->
-  </div>
-
-  <!-- vote form -->
-  <div class="vote-container">
-    <h1 id="sessionTitle">Loading...</h1>
-        <p>Share this code with friends: <strong id="inviteCode">...</strong></p>
+    <!-- filter -->
+    <div class="filter-container">
+      <h3>Filter by Genre:</h3>
+      <button class="filter-btn active" data-genre="all">All</button>
+      <button class="filter-btn" data-genre="28">Action</button>
+      <button class="filter-btn" data-genre="35">Comedy</button>
+      <button class="filter-btn" data-genre="18">Drama</button>
+      <button class="filter-btn" data-genre="878">Sci-Fi</button>
+      <button class="filter-btn" data-genre="27">Horror</button>
+    </div>
     
+    <!-- search  -->
+    <div class="search-container">
+      <input type="text" id="movieSearch" placeholder="🔍 Search movies...">
+    </div>
+
+    <!-- vote -->
     <form id="voteForm">
-      <div id="moviesContainer">
-        <!--<p>Loading movies...</p>-->
+      
+      <!-- movies -->
+      <div class="vote-section">
+        <h2>Pick Your Movies</h2>
+        <div id="moviesContainer" class="options-container">
+          <p class="loading-text">Loading movies...</p>
+        </div>
       </div>
       
-      <h2>Your Available Dates</h2>
-        <div id="datesContainer">
-          <!-- <p>Loading dates...</p>-->
+      <!-- dates -->
+      <div class="vote-section">
+        <h2>Your Available Dates</h2>
+        <div id="datesContainer" class="options-container">
+          <p class="loading-text">Loading dates...</p>
         </div>
+      </div>
 
-      <h2>Preferred Cinemas</h2>
-        <label><input type="checkbox" name="cinemas" value="Coca-Cola Plaza (Tallinn)"> Coca-Cola Plaza (Tallinn)</label>
-        <label><input type="checkbox" name="cinemas" value="Apollo Kino Solaris (Tallinn)"> Apollo Kino Solaris (Tallinn)</label>
-        <label><input type="checkbox" name="cinemas" value="Viimsi Artium (Viimsi)"> Viimsi Artium (Viimsi)</label>
-        <label><input type="checkbox" name="cinemas" value="Forum Cinemas Narva (Narva)"> Forum Cinemas Narva (Narva)</label>
-        <label><input type="checkbox" name="cinemas" value="Apollo Kino Tartu (Tartu)"> Apollo Kino Tartu (Tartu)</label>
+      <!-- cinemas  -->
+      <div class="vote-section">
+        <h2>Preferred Cinemas</h2>
+        <div class="options-container cinemas-container">
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Coca-Cola Plaza (Tallinn)"> 
+            Coca-Cola Plaza (Tallinn)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Apollo Kino Solaris (Tallinn)"> 
+            Apollo Kino Solaris (Tallinn)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Viimsi Artium (Viimsi)"> 
+            Viimsi Artium (Viimsi)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Forum Cinemas Narva (Narva)"> 
+            Forum Cinemas Narva (Narva)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Apollo Kino Tartu (Tartu)"> 
+            Apollo Kino Tartu (Tartu)
+          </label>
+        </div>
+      </div>
       
-        <button type="submit">Submit Vote</button>
+      <button type="submit" class="submit-vote-btn">Submit Vote</button>
     </form>
+
   </div>
 
   <script type="module" src="vote.js"></script>
@@ -77,6 +106,46 @@
       window.location.href = 'login.html';
   });
   </script>
+
+  <footer>
+  <!---- FOOTER ---->
+    <div class="content">
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Symc</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Get Started</li>
+          <li><a href="create.html">Create a Plan</a></li>
+          <li><a href="join.html">Join a Plan</a></li>
+          <li><a href="find.html">Find Cinemas</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="login.html">Sign In</a></li>
+          <li><a href="myacc.html">My account</a></li>
+          <li><a href="faves.html">Favorites</a></li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Subscribe to our newsletter!</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2025 <a href="index.html">Symc</a>All rights reserved</span>
+        <span class="policy_terms">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
