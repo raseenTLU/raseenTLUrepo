@@ -23,10 +23,11 @@
       </ul>
     </div>
   </nav>
-   <!-- session info -->
+    <!-- session info -->
     <div class="session-header">
       <h1 id="sessionTitle">Loading...</h1>
       <p class="invite-code-text">Share this code with friends: <strong id="inviteCode">...</strong></p>
+      <div class="vote-progress"></div>
     </div>
 
     <!-- filter -->
@@ -93,7 +94,53 @@
       
       <button type="submit" class="submit-vote-btn">Submit Vote</button>
     </form>
+    <form id="voteForm">
+      
+      <!-- STEP 1: movies -->
+      <div class="vote-section" data-step="1">
+        <h2>Pick Your Movies</h2>
+        <div id="moviesContainer" class="options-container">
+          <p class="loading-text">Loading movies...</p>
+        </div>
+      </div>
+      
+      <!-- STEP 2: dates -->
+      <div class="vote-section" data-step="2">
+        <h2>Your Available Dates</h2>
+        <div id="datesContainer" class="options-container">
+          <p class="loading-text">Loading dates...</p>
+        </div>
+      </div>
 
+      <!-- STEP 3: cinemas -->
+      <div class="vote-section" data-step="3">
+        <h2>Preferred Cinemas</h2>
+        <div class="options-container cinemas-container">
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Coca-Cola Plaza (Tallinn)"> 
+            Coca-Cola Plaza (Tallinn)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Apollo Kino Solaris (Tallinn)"> 
+            Apollo Kino Solaris (Tallinn)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Viimsi Artium (Viimsi)"> 
+            Viimsi Artium (Viimsi)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Forum Cinemas Narva (Narva)"> 
+            Forum Cinemas Narva (Narva)
+          </label>
+          <label class="cinema-option">
+            <input type="checkbox" name="cinemas" value="Apollo Kino Tartu (Tartu)"> 
+            Apollo Kino Tartu (Tartu)
+          </label>
+        </div>
+      </div>
+      
+      <button type="submit" class="submit-vote-btn">Submit Vote</button>
+    </form>
   </div>
 
   <script type="module" src="vote.js"></script>
