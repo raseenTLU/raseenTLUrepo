@@ -19,7 +19,7 @@ onAuthStateChanged(auth, async (user) => {
         window.location.href = 'login.html';
     } else {
         await loadResults();
-        startLiveUpdates();
+        //startLiveUpdates();
     }
 });
 
@@ -42,7 +42,6 @@ async function loadResults() {
         // did vote count change?
         if (votesSnapshot.size !== currentVoteCount) {
             currentVoteCount = votesSnapshot.size;
-            showUpdateNotification();
         }
         
         const movieVotes = {};
@@ -198,26 +197,6 @@ async function displayWinnerAnnouncement(movieVotes, dateVotes, cinemaVotes) {
             </div>
         </div>
     `;
-}
-
-// live updates functionality
-function startLiveUpdates() {
-    setInterval(async () => {
-        await loadResults();
-    }, 5000);
-    
-    console.log('Live updates enabled - checking every 5 seconds');
-}
-
-function showUpdateNotification() {
-    const notification = document.getElementById('updateNotification');
-    if (notification && currentVoteCount > 0) {
-        notification.style.display = 'inline-block';
-        
-        setTimeout(() => {
-            notification.style.display = 'none';
-        }, 3000);
-    }
 }
 
 // share functionality
