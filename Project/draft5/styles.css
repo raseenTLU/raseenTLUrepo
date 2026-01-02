@@ -496,13 +496,13 @@ nav #logoutBtn.styled:hover {
     font-size: 24px;
     font-weight: bold;
 }
-.winner-section h2,
+/* .winner-section h2,
 .winner-section .winner-details h3,
 .winner-section .winner-details p,
 .winner-section .winner-item h3,
 .winner-section .winner-item p {
     color: white;
-}
+} */
 /* results grid */
 .results-grid {
     display: grid;
