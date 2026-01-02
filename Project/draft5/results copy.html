@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results | Symc</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 
 <body>
@@ -24,57 +23,33 @@
     </div>
   </nav>
 
-  <div class="results-page-container">
-    
-    <!-- results header -->
-    <div class="results-header">
-      <h1>🎬 Voting Results</h1>
-      <div class="results-meta">
-        <span id="totalVotes" class="vote-count">Total Votes: 0</span>
-        <div id="updateNotification" class="update-badge">✓ Updated</div>
-      </div>
-    </div>
+  <div class="results-container">
+    <h1>Voting Results</h1>
+    <p id="totalVotes">Total Votes: 0</p>
 
-    <!-- share -->
+    <!-- share button -->
     <div class="share-section">
-      <button id="shareResultsBtn" class="share-btn">
-        <i class="fas fa-link"></i> Copy Results Link
-      </button>
-      <p id="shareMessage" class="share-success">✓ Link copied to clipboard!</p>
+        <button id="shareResultsBtn">📋 Copy Results Link</button>
+        <p id="shareMessage" style="display:none; color:green;">Link copied!</p>
     </div>
 
-    <!-- winner populated by JS -->
-    <div id="winnerAnnouncement" class="winner-section">
-      <!-- JS content -->
-    </div>
-
-    <!-- results -->
-    <div class="results-grid">
-      
-      <section class="result-section">
-        <h2><i class="fas fa-film"></i> Top Movies</h2>
-        <div id="movieResults" class="results-list">
-          <p class="loading-text">Loading results...</p>
-        </div>
-      </section>
-      
-      <section class="result-section">
-        <h2><i class="fas fa-calendar"></i> Best Dates</h2>
-        <div id="dateResults" class="results-list">
-          <p class="loading-text">Loading results...</p>
-        </div>
-      </section>
-      
-      <section class="result-section">
-        <h2><i class="fas fa-map-marker-alt"></i> Preferred Cinemas</h2>
-        <div id="cinemaResults" class="results-list">
-          <p class="loading-text">Loading results...</p>
-        </div>
-      </section>
-      
-    </div>
+    <div id="updateNotification" style="display:none; color:green;"></div>
+    
+    <section>
+      <h2>Top Movies</h2>
+      <div id="movieResults"></div>
+    </section>
+    
+    <section>
+      <h2>Best Dates</h2>
+      <div id="dateResults"></div>
+    </section>
+    
+    <section>
+      <h2>Preferred Cinemas</h2>
+      <div id="cinemaResults"></div>
+    </section>
   </div>
-
 
   <script type="module" src="results.js"></script>
   <script type="module">
