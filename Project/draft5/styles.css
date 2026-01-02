@@ -406,7 +406,7 @@ nav #logoutBtn.styled:hover {
     flex-wrap: wrap;
 }
 .vote-count {
-    background: #f0f0f0;
+    background: floralwhite;
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: 600;
@@ -416,8 +416,8 @@ nav #logoutBtn.styled:hover {
 .update-badge,
 #updateNotification {
     display: none;
-    background: #d4edda;
-    color: #155724;
+    background: lightcyan;
+    color: green;
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: 600;
@@ -432,7 +432,7 @@ nav #logoutBtn.styled:hover {
     margin: 30px 0;
 }
 .share-btn {
-    background: #6c63ff;
+    background: rebeccapurple;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -444,7 +444,7 @@ nav #logoutBtn.styled:hover {
     box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
 }
 .share-btn:hover {
-    background: #5753d4;
+    background: indigo;
     transform: translateY(-2px);
 }
 .share-btn i {
@@ -459,7 +459,7 @@ nav #logoutBtn.styled:hover {
 }
 /* winner announcement section */
 .winner-section {
-    background: linear-gradient(135deg, #6c63ff 0%, #a29bfe 100%);
+    background: linear-gradient(135deg, indigo 0%, mediumpurple 100%);
     color: white;
     padding: 30px;
     border-radius: 16px;
@@ -515,13 +515,13 @@ nav #logoutBtn.styled:hover {
     color: #333;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 3px solid #6c63ff;
+    border-bottom: 3px solid indigo;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 .result-section h2 i {
-    color: #6c63ff;
+    color: rebeccapurple;
 }
 /* results list */
 .results-list {
@@ -535,7 +535,7 @@ nav #logoutBtn.styled:hover {
     align-items: center;
     gap: 15px;
     padding: 15px;
-    background: #f9f9f9;
+    background: floralwhite;
     border-radius: 10px;
     transition: all 0.3s;
     position: relative;
@@ -547,8 +547,8 @@ nav #logoutBtn.styled:hover {
 }
 /* winner badge */
 .result-item.winner {
-    background: linear-gradient(135deg, #fff5e6 0%, #ffe6f0 100%);
-    border: 2px solid #6c63ff;
+    background: linear-gradient(135deg, floralwhite 0%, floralwhite 100%);
+    border: 2px solid indigo;
 }
 .result-item.winner::before {
     content: '🏆';
@@ -571,7 +571,7 @@ nav #logoutBtn.styled:hover {
 .result-count {
     font-size: 18px;
     font-weight: bold;
-    color: #6c63ff;
+    color: indigo;
     min-width: 80px;
     text-align: right;
 }
@@ -752,11 +752,11 @@ nav #logoutBtn.styled:hover {
 /* -------------------------- UPDATE NOTIFICATION ------------------------- */
 #updateNotification {
     padding: 10px;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
+    background: lightcyan;
+    border: 1px solid lightgreen;
     border-radius: 5px;
     margin: 10px 0;
-    color: #155724;
+    color: forestgreen;
     font-weight: bold;
 }
 /* ------------------------------ NAVIGATION -------------------------------- */
