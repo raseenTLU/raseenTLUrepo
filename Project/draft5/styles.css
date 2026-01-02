@@ -487,7 +487,6 @@ nav #logoutBtn.styled:hover {
 }
 .winner-item h3 {
     font-size: 14px;
-    color: white
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -496,6 +495,13 @@ nav #logoutBtn.styled:hover {
 .winner-item p {
     font-size: 24px;
     font-weight: bold;
+}
+.winner-section h2,
+.winner-section .winner-details h3,
+.winner-section .winner-details p,
+.winner-section .winner-item h3,
+.winner-section .winner-item p {
+    color: white;
 }
 /* results grid */
 .results-grid {
