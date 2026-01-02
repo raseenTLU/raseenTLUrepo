@@ -6,7 +6,7 @@
 // const signupForm = document.getElementById('signupForm');
 // const signupError = document.getElementById('signupError');
 
-import { auth } from './js/firebase-config.js';
+import { auth } from './firebase-config.js';
 import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
 const signupForm = document.getElementById('signupForm');
