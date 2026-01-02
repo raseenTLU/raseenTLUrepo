@@ -542,7 +542,7 @@ nav #logoutBtn.styled:hover {
     align-items: center;
     gap: 15px;
     padding: 15px;
-    background: floralwhite;
+    background: whitesmoke;
     border-radius: 10px;
     transition: all 0.3s;
     position: relative;
@@ -554,7 +554,7 @@ nav #logoutBtn.styled:hover {
 }
 /* winner badge */
 .result-item.winner {
-    background: linear-gradient(135deg, floralwhite 0%, floralwhite 100%);
+    background: linear-gradient(135deg, thistle 0%, floralwhite 100%);
     border: 2px solid indigo;
 }
 .result-item.winner::before {
