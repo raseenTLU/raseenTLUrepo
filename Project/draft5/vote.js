@@ -13,7 +13,7 @@ async function loadMovies() {
         const data = await response.json(); // PARSE = JSON response, convert API response to usable format
         
         const moviesContainer = document.getElementById('moviesContainer');
-        moviesContainer.innerHTML = '<h2>Pick Your Movies</h2>';
+        //moviesContainer.innerHTML = '<h2>Pick Your Movies</h2>';
         
         allMovieElements = []; // clear previous movies
         moviesData = data.results.slice(0, 20); // store movie data, limit to 20
