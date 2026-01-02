@@ -1,4 +1,4 @@
-import { auth } from './firebase-config.js';
+import { auth } from './js/firebase-config.js';
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
 // protect page
