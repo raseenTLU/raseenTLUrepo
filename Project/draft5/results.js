@@ -4,7 +4,7 @@ import { doc, getDoc, collection, getDocs } from "https://www.gstatic.com/fireba
 
 let sessionId = null;
 let currentVoteCount = 0;
-const API_KEY = 'YOUR_API_KEY_HERE'; // replace with your TMDB API key
+const API_KEY = '050e10fb491f474c20e03b7421aae916';
 
 const urlParams = new URLSearchParams(window.location.search);
 sessionId = urlParams.get('session');
