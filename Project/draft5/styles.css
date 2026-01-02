@@ -487,6 +487,7 @@ nav #logoutBtn.styled:hover {
 }
 .winner-item h3 {
     font-size: 14px;
+    color: white
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
