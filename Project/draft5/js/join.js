@@ -1,3 +1,4 @@
+// this file manages the join session page
 import { auth, db } from './firebase-config.js';
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
@@ -16,7 +17,7 @@ const joinError = document.getElementById('joinError');
 joinForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const inviteCode = document.getElementById('inviteCodeInput').value.toUpperCase().trim(); // Normalize input
+    const inviteCode = document.getElementById('inviteCodeInput').value.toUpperCase().trim(); // GET invite code with uppercase, no spaces
     
     try {
         // search for session with this invite code
@@ -32,7 +33,7 @@ joinForm.addEventListener('submit', async (e) => {
         
         // get the session ID
         const sessionDoc = querySnapshot.docs[0]; // ASSUME = take the first matching session
-        const sessionId = sessionDoc.id;
+        const sessionId = sessionDoc.id; // get session document ID
         
         // redirect to voting page
         window.location.href = `vote.html?session=${sessionId}`;
