@@ -5,6 +5,7 @@ import { doc, getDoc, collection, getDocs } from "https://www.gstatic.com/fireba
 
 let sessionId = null;
 let currentVoteCount = 0;
+let sessionInviteCode = null; // store invite code
 const API_KEY = '050e10fb491f474c20e03b7421aae916';
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -39,6 +40,12 @@ async function getMovieTitle(movieId) {
 
 async function loadResults() {
     try {
+        // FETCH session document to get invite code
+        const sessionDoc = await getDoc(doc(db, 'sessions', sessionId));
+        if (sessionDoc.exists()) {
+            sessionInviteCode = sessionDoc.data().inviteCode;
+        }
+
         // GET all votes for this session
         const votesSnapshot = await getDocs(collection(db, 'sessions', sessionId, 'votes'));
         
@@ -97,7 +104,7 @@ async function displayMovieResults(votes, totalVotes) {
     }
     
     // sort by vote count
-    const sorted = Object.entries(votes).sort((a, b) => b[1] - a[1]);
+    const sorted = Object.entries(votes).sort((a, b) => b[1] - a[1]); // sort by vote count descending
     const maxVotes = sorted[0][1]; // highest vote count for bar scaling
     
     // LOOP through sorted results
@@ -211,16 +218,20 @@ async function displayWinnerAnnouncement(movieVotes, dateVotes, cinemaVotes) {
 const shareBtn = document.getElementById('shareResultsBtn');
 if (shareBtn) {
     shareBtn.addEventListener('click', () => {
-        const resultsUrl = `${window.location.origin}/results.html?session=${sessionId}`;
+        if (!sessionInviteCode) {
+            alert('Invite code not available');
+            return;
+        }
         
-        navigator.clipboard.writeText(resultsUrl).then(() => {
+        // COPY invite code to clipboard
+        navigator.clipboard.writeText(sessionInviteCode).then(() => {
             const message = document.getElementById('shareMessage');
             message.style.display = 'block';
             setTimeout(() => {
                 message.style.display = 'none';
             }, 2000);
         }).catch(err => {
-            alert('Failed to copy link. Please copy manually: ' + resultsUrl);
+            alert('Failed to copy. Invite code: ' + sessionInviteCode);
         });
     });
 }
